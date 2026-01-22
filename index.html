@@ -3,94 +3,143 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bienvenue | Internat 4000</title>
-    <meta name="description" content="Page d'entrée vers Internat 4000">
-
+    <title>Internat 4000 | Experience</title>
+    
     <style>
-        /* --- Reset et base --- */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html, body {
+        /* --- Reset et Base --- */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body, html {
             height: 100%;
             width: 100%;
-            overflow: hidden; /* Empêche le défilement */
-            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-        }
-
-        /* --- Arrière-plan design --- */
-        body {
-            display: flex;
-            justify-content: center; /* Centrage horizontal */
-            align-items: center; /* Centrage vertical */
-            /* Un dégradé sombre et profond pour un look moderne */
-            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
-            color: white;
-        }
-
-        /* --- Conteneur principal avec animation d'entrée --- */
-        .container {
-            text-align: center;
-            /* Petite animation à l'arrivée sur la page */
-            animation: fadeUp 1.2s ease-out;
-        }
-
-        /* --- Le bouton "ENTRER" --- */
-        .enter-link {
-            /* Style du texte */
-            text-decoration: none;
-            font-size: 1.5rem; /* Taille du texte */
-            font-weight: 300; /* Fin et élégant */
-            letter-spacing: 6px; /* Espacement entre les lettres */
-            text-transform: uppercase;
-            color: rgba(255, 255, 255, 0.8);
-
-            /* Style du bouton (forme) */
-            display: inline-block;
-            padding: 20px 60px;
-            border: 1px solid rgba(255, 255, 255, 0.3); /* Bordure subtile */
-            border-radius: 50px; /* Bords arrondis */
-            
-            /* Transitions fluides pour les animations */
-            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-            position: relative;
             overflow: hidden;
-            backdrop-filter: blur(5px); /* Effet de flou léger derrière le bouton */
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            background-color: #000;
         }
 
-        /* --- Effet au survol (Hover) --- */
-        .enter-link:hover {
-            background-color: white;
-            color: #0f0c29; /* Le texte devient sombre */
-            border-color: white;
-            box-shadow: 0 0 30px rgba(255, 255, 255, 0.3); /* Effet de "lueur" */
-            transform: scale(1.05); /* Légère augmentation de taille */
-            letter-spacing: 8px; /* Les lettres s'écartent un peu plus */
+        /* --- Conteneur Split Screen --- */
+        .split-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: flex;
         }
 
-        /* --- L'animation d'apparition au chargement --- */
-        @keyframes fadeUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px); /* Vient du bas */
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        /* Chaque moitié de l'écran */
+        .split {
+            position: relative;
+            width: 50%;
+            height: 100%;
+            overflow: hidden;
+            transition: all 0.5s ease;
+        }
+
+        /* Style des vidéos */
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Remplit tout l'espace sans déformation */
+            
+            /* Filtre "Cinema" par défaut : Noir & Blanc contrasté */
+            filter: grayscale(100%) contrast(120%) brightness(60%);
+            transition: filter 0.8s ease, transform 4s ease;
+            transform: scale(1.01);
+        }
+
+        /* --- Effet au survol des zones vidéos --- */
+        .split:hover video {
+            /* La vidéo reprend ses couleurs et zoom légèrement */
+            filter: grayscale(0%) contrast(100%) brightness(90%);
+            transform: scale(1.05);
+        }
+
+        /* --- Le Bouton Central (Overlay) --- */
+        .center-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 10;
+            text-align: center;
+            width: 100%;
+            pointer-events: none; /* Laisse passer la souris pour l'effet hover des vidéos */
+        }
+
+        /* Le style du bouton lui-même */
+        .enter-btn {
+            pointer-events: auto; /* Réactive le clic sur le bouton */
+            display: inline-block;
+            text-decoration: none;
+            color: white;
+            font-size: 1.2rem;
+            font-weight: 600;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            
+            padding: 25px 50px;
+            
+            /* Effet Glassmorphism (Verre dépoli) */
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            
+            transition: all 0.4s ease;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Hover sur le bouton */
+        .enter-btn:hover {
+            background: rgba(255, 255, 255, 1);
+            color: black;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+            letter-spacing: 6px;
+        }
+
+        /* Ligne décorative verticale au centre */
+        .divider {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 1px;
+            background: rgba(255, 255, 255, 0.15);
+            z-index: 5;
+        }
+
+        /* Responsive : Sur mobile, on empile les vidéos l'une sur l'autre */
+        @media (max-width: 768px) {
+            .split-container { flex-direction: column; }
+            .split { width: 100%; height: 50%; }
+            .divider { width: 100%; height: 1px; left: 0; top: 50%; }
         }
     </style>
 </head>
 <body>
 
-    <main class="container">
-        <a href="https://internat4000.netlify.app" class="enter-link">
-            Entrer
-        </a>
-    </main>
+    <div class="split-container">
+        
+        <div class="split split-left">
+            <video autoplay muted loop playsinline>
+                <source src="Génération_Vidéo_Dentaire_en_Boucle.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <div class="split split-right">
+            <video autoplay muted loop playsinline>
+                <source src="Génération_Vidéo_Bloc_Opératoire_Dentaire.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="center-overlay">
+            <a href="https://internat4000.netlify.app" class="enter-btn">
+                Entrer
+            </a>
+        </div>
+
+    </div>
 
 </body>
 </html>
