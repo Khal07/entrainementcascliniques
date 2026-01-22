@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cas N°1 - Parodontologie</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        /* Styles spécifiques pour ce format "Question par Question" */
+        .enonce {
+            background-color: #f8f9fa;
+            border-left: 4px solid #3498db;
+            padding: 20px;
+            border-radius: 4px;
+            margin-bottom: 30px;
+            font-size: 0.95em;
+            line-height: 1.6;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        
+        .qa-block {
+            background-color: #fff;
+            border: 1px solid #eee;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px; /* Espace entre chaque question */
+            box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+        }
+
+        .question-title {
+            font-weight: bold;
+            color: #2c3e50;
+            font-size: 1.1em;
+            display: block;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #ecf0f1;
+            padding-bottom: 5px;
+        }
+
+        .question-text {
+            margin-bottom: 15px;
+            color: #34495e;
+        }
+
+        /* Bouton spécifique pour l'intérieur des questions */
+        button.toggle-btn {
+            background-color: #3498db; /* Bleu au lieu de vert pour différencier */
+            font-size: 0.9em;
+            padding: 8px 20px;
+            margin: 10px 0;
+            width: auto;
+            display: inline-block;
+        }
+        button.toggle-btn:hover {
+            background-color: #2980b9;
+        }
+
+        .correction {
+            display: none; /* Caché par défaut */
+            margin-top: 15px;
+            padding: 15px;
+            background-color: #e8f5e9; /* Fond vert très clair */
+            border-left: 4px solid #27ae60; /* Barre verte à gauche */
+            border-radius: 4px;
+            color: #1b5e20;
+        }
+
+        .correction h4 {
+            margin-top: 0;
+            color: #27ae60;
+            font-size: 1em;
+            text-transform: uppercase;
+            border-bottom: 1px solid #c8e6c9;
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+        }
+
+        ul { margin-top: 5px; margin-bottom: 10px; padding-left: 20px; }
+        li { margin-bottom: 5px; }
+    </style>
+</head>
+<body>
+
+    <script>
+        if (localStorage.getItem('isLoggedIn') !== 'true') {
+            window.location.href = '../index.html';
+        }
+    </script>
+
+    <nav style="background: #2c3e50;">
+        <div class="nav-content">
+            <span class="logo" style="color:white;">Paro - Cas N°1</span>
+            <div class="nav-links">
+                <a href="cas_cliniques_paro.html" class="nav-btn" style="color:white; border-color:white;">&larr; Retour aux Cas</a>
+                <a href="../index.html" class="nav-btn" style="color:white; border-color:white;">Accueil</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <header>
+            <h1>Cas Clinique N°1 : Urgence Parodontale</h1>
+            <p class="subtitle">Abcès parodontal - Diagnostic & Prise en charge</p>
+        </header>
+
+        <div class="enonce">
+            <h3 style="margin-top:0; color:#2c3e50;">ÉNONCÉ DU CAS CLINIQUE</h3>
+            <p>Un patient de 52 ans, fumeur (15 cigarettes/jour), diabétique de type 2 équilibré (HbA1c : 6,8 %), consulte en urgence pour une douleur intense et pulsatile dans le secteur mandibulaire droit.</p>
+            <p>Le patient rapporte une apparition brutale des symptômes il y a 48 heures. Il décrit une « sensation de dent longue » et signale qu'il lui est « impossible de serrer les dents » de ce côté. Il ne rapporte pas d'antécédents de traumatisme récent mais signale des saignements gingivaux chroniques lors du brossage.</p>
+            <p>L’examen clinique exobuccal révèle une légère asymétrie faciale basse droite associée à une adénopathie sous-mandibulaire palpable et sensible. Il n'y a pas de trismus. Le patient est apyrétique (37,2°C).</p>
+            <p>L’examen endobuccal met en évidence une hygiène bucco-dentaire insuffisante (Indice de Plaque > 70 %). Au niveau de la 46, on observe une tuméfaction gingivale vestibulaire ovoïde, érythémateuse, lisse et brillante, située en regard de la racine mésiale. La palpation de la tuméfaction est douloureuse et provoque l'issue d'un exsudat purulent par le sulcus.</p>
+            <p><strong>Les données cliniques spécifiques à la 46 sont les suivantes :</strong></p>
+            <ul>
+                <li><strong>Sondage :</strong> Poche parodontale de 8 mm en mésio-vestibulaire, saignement abondant au sondage (BOP+).</li>
+                <li><strong>Mobilité :</strong> Classe III.</li>
+                <li><strong>Vitalité pulpaire :</strong> Positive aux tests thermiques (froid).</li>
+                <li><strong>Percussion :</strong> Positive (sensibilité axiale).</li>
+            </ul>
+            <p><strong>Examen radiographique :</strong> L'examen (rétro-alvéolaire de la 46) objective une alvéolyse horizontale généralisée atteignant le tiers moyen des racines, associée à une image radioclaire latérale le long de la racine mésiale de la 46. L'espace desmodontal est élargi. Aucune image péri-apicale n'est visible.</p>
+        </div>
+
+        <div class="qa-block">
+            <span class="question-title">Question 1 : Diagnostic</span>
+            <p class="question-text">Quel est votre diagnostic précis pour la 46 selon la classification de Chicago 2017 ? Justifiez votre réponse en discutant les diagnostics différentiels.</p>
+            
+            <button class="toggle-btn" onclick="toggleCorrection('q1')">Afficher la réponse</button>
+            
+            <div id="q1" class="correction">
+                <h4>Correction</h4>
+                <p><strong>Diagnostic :</strong> Abcès parodontal chez un patient atteint de parodontite (Stade III probable, Grade C du fait du tabac/diabète).</p>
+                <p><strong>Justification :</strong></p>
+                <ul>
+                    <li><strong>Signes cliniques :</strong> Tuméfaction ovoïde latérale, suppuration au sondage, poche profonde préexistante (8 mm).</li>
+                    <li><strong>Vitalité :</strong> Positive, ce qui exclut l'origine endodontique primaire.</li>
+                    <li><strong>Radio :</strong> Image radioclaire latérale, absence de lésion apicale.</li>
+                </ul>
+                <p><strong>Diagnostics différentiels à écarter :</strong></p>
+                <ul>
+                    <li><strong>Abcès péri-apical (origine endodontique) :</strong> Exclu car vitalité positive et absence de carie profonde ou lésion apicale.</li>
+                    <li><strong>Abcès endo-parodontal :</strong> Exclu car vitalité positive (pas de nécrose pulpaire à ce stade).</li>
+                    <li><strong>Fracture radiculaire verticale :</strong> Sondage ponctuel et étroit, souvent trait de fracture visible ou antécédent de tenon (non mentionné ici).</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="qa-block">
+            <span class="question-title">Question 2 : Physiopathologie</span>
+            <p class="question-text">Expliquez le mécanisme physiopathologique à l'origine de la sensation de « dent longue » décrite par le patient.</p>
+            
+            <button class="toggle-btn" onclick="toggleCorrection('q2')">Afficher la réponse</button>
+            
+            <div id="q2" class="correction">
+                <h4>Correction</h4>
+                <ul>
+                    <li><strong>Œdème inflammatoire :</strong> L'accumulation de pus et l'inflammation aiguë au niveau du ligament alvéolo-dentaire (desmodonte) provoquent une pression interne.</li>
+                    <li><strong>Extrusion dentaire :</strong> Cette pression entraîne une légère égression (extrusion) de la dent hors de son alvéole.</li>
+                    <li><strong>Surcharge occlusale :</strong> La dent étant en surocclusion, tout contact antagoniste sollicite les mécanorécepteurs ligamentaires hyper-sensibilisés, provoquant une douleur vive à la percussion/mastication.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="qa-block">
+            <span class="question-title">Question 3 : Prise en charge immédiate</span>
+            <p class="question-text">Détaillez votre prise en charge de l'urgence lors de cette séance. Rédigez, le cas échéant, la prescription médicamenteuse en vous basant sur les recommandations CNEP SFPIO 2024.</p>
+            
+            <button class="toggle-btn" onclick="toggleCorrection('q3')">Afficher la réponse</button>
+            
+            <div id="q3" class="correction">
+                <h4>Correction</h4>
+                <p><strong>Geste Local (PRIORITAIRE) :</strong></p>
+                <ul>
+                    <li><strong>Drainage :</strong> Voie trans-sulculaire (par la poche) ou incision de la collection si fluctuante.</li>
+                    <li><strong>Débridement mécanique :</strong> Instrumentation ultra-sonore/manuelle pour éliminer le tartre/biofilm et permettre l'évacuation du pus.</li>
+                    <li><strong>Irrigation :</strong> Antiseptique (Chlorhexidine ou Bétadine).</li>
+                    <li><strong>Ajustement occlusal (Meulage sélectif) :</strong> Indispensable pour soulager la surocclusion (dent extrusée) et le confort immédiat.</li>
+                </ul>
+                <p><strong>Prescription Médicamenteuse (Selon CNEP 2024) :</strong></p>
+                <ul>
+                    <li><strong>Indication d'antibiotiques ?</strong> OUI.</li>
+                    <li><strong>Justification :</strong> Présence de signes systémiques (Adénopathie palpable et sensible) et terrain à risque (Diabète type 2, bien que équilibré, le tabagisme aggrave le risque infectieux). La recommandation CNEP 2024 indique l'ATB si "atteinte systémique (fièvre, lymphadénopathie...)".</li>
+                    <li><strong>Ordonnance :</strong>
+                        <ul>
+                            <li><strong>Amoxicilline :</strong> 2 g/jour (1g matin et soir) pendant 7 jours.</li>
+                            <li><strong>Antalgiques :</strong> Paracétamol 1g toutes les 6h si douleur (Palier 1). Éviter les AINS si possible (risque de diffusion infectieuse).</li>
+                            <li><strong>Bain de bouche :</strong> Chlorhexidine 0,12% (après 24-48h).</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="qa-block">
+            <span class="question-title">Question 4 : Pronostic et Suivi</span>
+            <p class="question-text">Une fois la phase aiguë résolue, quelle sera votre stratégie thérapeutique globale pour ce patient ?</p>
+            
+            <button class="toggle-btn" onclick="toggleCorrection('q4')">Afficher la réponse</button>
+            
+            <div id="q4" class="correction">
+                <h4>Correction</h4>
+                <ul>
+                    <li><strong>Réévaluation :</strong> À 48-72h pour vérifier la résolution des symptômes aigus.</li>
+                    <li><strong>Traitement Étiologique (TPNC) :</strong>
+                        <ul>
+                            <li>Bilan parodontal complet (Charting, Radio long-cône).</li>
+                            <li>Enseignement à l'hygiène orale (EHO) et sevrage tabagique (Conseil minimal).</li>
+                            <li>Détartrage et Surfaçage radiculaire (bouche complète) pour traiter la parodontite sous-jacente.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Chirurgie (TPC) :</strong> Envisageable dans un second temps (après réévaluation à 3 mois) si la poche de 8 mm persiste (Lambeau d'assainissement ou régénération si défaut intra-osseux).</li>
+                    <li><strong>Maintenance (TPS) :</strong> Suivi régulier (tous les 3 mois vu le profil Fumeur/Diabétique/Parodontite sévère).</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function toggleCorrection(id) {
+            var x = document.getElementById(id);
+            var btn = x.previousElementSibling; // Le bouton est juste avant la div correction
+            
+            if (x.style.display === "none" || x.style.display === "") {
+                x.style.display = "block";
+                btn.textContent = "Masquer la réponse";
+                btn.style.backgroundColor = "#7f8c8d"; // Change la couleur en gris quand ouvert
+            } else {
+                x.style.display = "none";
+                btn.textContent = "Afficher la réponse";
+                btn.style.backgroundColor = "#3498db"; // Revient en bleu
+            }
+        }
+    </script>
+    
+    <script src="../script.js"></script>
+
+</body>
+</html>

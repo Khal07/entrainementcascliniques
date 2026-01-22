@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cas N°14 - Parodontologie</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        /* Styles spécifiques pour ce format "Question par Question" */
+        .enonce {
+            background-color: #f8f9fa;
+            border-left: 4px solid #3498db;
+            padding: 20px;
+            border-radius: 4px;
+            margin-bottom: 30px;
+            font-size: 0.95em;
+            line-height: 1.6;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        
+        .qa-block {
+            background-color: #fff;
+            border: 1px solid #eee;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+        }
+
+        .question-title {
+            font-weight: bold;
+            color: #2c3e50;
+            font-size: 1.1em;
+            display: block;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #ecf0f1;
+            padding-bottom: 5px;
+        }
+
+        .question-text {
+            margin-bottom: 15px;
+            color: #34495e;
+        }
+
+        button.toggle-btn {
+            background-color: #3498db;
+            font-size: 0.9em;
+            padding: 8px 20px;
+            margin: 10px 0;
+            width: auto;
+            display: inline-block;
+        }
+        button.toggle-btn:hover {
+            background-color: #2980b9;
+        }
+
+        .correction {
+            display: none;
+            margin-top: 15px;
+            padding: 15px;
+            background-color: #e8f5e9;
+            border-left: 4px solid #27ae60;
+            border-radius: 4px;
+            color: #1b5e20;
+        }
+
+        .correction h4 {
+            margin-top: 0;
+            color: #27ae60;
+            font-size: 1em;
+            text-transform: uppercase;
+            border-bottom: 1px solid #c8e6c9;
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+        }
+
+        ul { margin-top: 5px; margin-bottom: 10px; padding-left: 20px; }
+        li { margin-bottom: 5px; }
+    </style>
+</head>
+<body>
+
+    <script>
+        if (localStorage.getItem('isLoggedIn') !== 'true') {
+            window.location.href = '../index.html';
+        }
+    </script>
+
+    <nav style="background: #2c3e50;">
+        <div class="nav-content">
+            <span class="logo" style="color:white;">Paro - Cas N°14</span>
+            <div class="nav-links">
+                <a href="cas_cliniques_paro.html" class="nav-btn" style="color:white; border-color:white;">&larr; Retour aux Cas</a>
+                <a href="../index.html" class="nav-btn" style="color:white; border-color:white;">Accueil</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <header>
+            <h1>Cas Clinique N°14 : Lésion Inter-Radiculaire</h1>
+            <p class="subtitle">Furcation mandibulaire - Diagnostic, Classification & Régénération</p>
+        </header>
+
+        <div class="enonce">
+            <h3 style="margin-top:0; color:#2c3e50;">ÉNONCÉ DU CAS CLINIQUE</h3>
+            <p>Un patient de 54 ans, ancien fumeur (sevrage depuis 10 ans), en bonne santé générale (ASA 1), est adressé par son omnipraticien pour la persistance d'une infection au niveau de la première molaire mandibulaire droite (46) malgré un détartrage réalisé il y a 6 mois.</p>
+            <p>Le patient rapporte des épisodes de gêne gingivale intermittente et de tassements alimentaires dans cette zone, sans douleur aiguë.</p>
+            <p>L’examen clinique révèle une hygiène bucco-dentaire correcte (Indice de Plaque = 20 %). La gencive marginale en regard de la 46 est inflammatoire, œdématiée et violacée.</p>
+            <p><strong>Les données cliniques spécifiques à la 46 sont les suivantes :</strong></p>
+            <ul>
+                <li><strong>Sondage parodontal (Sonde droite) :</strong> Poche de 7 mm en médio-vestibulaire et de 5 mm en médio-lingual.</li>
+                <li><strong>Sondage de furcation (Sonde de Nabers) :</strong> En vestibulaire, la sonde pénètre horizontalement de 5 mm dans l'espace inter-radiculaire sans ressortir en lingual. En lingual, l'entrée de la furcation n'est pas sondable.</li>
+                <li><strong>Saignement :</strong> Saignement au sondage (BOP+) et léger suintement purulent à la pression de la zone de furcation vestibulaire.</li>
+                <li><strong>Mobilité :</strong> Classe I.</li>
+                <li><strong>Vitalité pulpaire :</strong> Positive aux tests thermiques.</li>
+            </ul>
+            <p><strong>Examen radiographique :</strong> Le cliché rétro-alvéolaire de la 46 objective une image radioclaire triangulaire au niveau de la zone de furcation. Le niveau osseux interproximal (mésial et distal) se situe dans le tiers moyen des racines. Les racines sont divergentes et le tronc radiculaire est de hauteur moyenne. Aucune image péri-apicale n'est visible.</p>
+        </div>
+
+        <div class="qa-block">
+            <span class="question-title">Question 1 : Diagnostic et Classification</span>
+            <p class="question-text">Quel est votre diagnostic parodontal global selon la classification de Chicago 2017 ? Qualifiez précisément l'atteinte de furcation de la 46 selon les classifications de Hamp (horizontale) et de Tarnow (verticale).</p>
+            
+            <button class="toggle-btn" onclick="toggleCorrection('q1')">Afficher la réponse</button>
+            
+            <div id="q1" class="correction">
+                <h4>Correction</h4>
+                <p><strong>Diagnostic Global (Chicago 2017) :</strong> Parodontite de Stade III, Grade B, Localisée (ou Généralisée).</p>
+                <ul>
+                    <li><strong>Justification Stade III :</strong> Présence d'une atteinte de furcation de classe II (Hamp) et poche &ge; 6 mm.</li>
+                </ul>
+                <p><strong>Classification de la LIR (46) :</strong></p>
+                
+                <ul>
+                    <li><strong>Classification de Hamp (Composante Horizontale) :</strong> Classe II.
+                        <ul>
+                            <li><em>Justification :</em> Perte de substance horizontale > 3 mm mais non transfixante (ne traverse pas de part en part).</li>
+                        </ul>
+                    </li>
+                    
+                    <li><strong>Classification de Tarnow (Composante Verticale) :</strong> Sous-classe B (probablement).
+                        <ul>
+                            <li><em>Justification :</em> Poche de 7 mm (suppose une perte verticale comprise entre 3 et 6 mm par rapport aux collets voisins).</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="qa-block">
+            <span class="question-title">Question 2 : Pronostic et Facteurs anatomiques</span>
+            <p class="question-text">Analysez les facteurs anatomiques locaux visibles à la radiographie et décrits cliniquement qui influencent le choix thérapeutique et le pronostic de cette molaire.</p>
+            
+            <button class="toggle-btn" onclick="toggleCorrection('q2')">Afficher la réponse</button>
+            
+            <div id="q2" class="correction">
+                <h4>Correction</h4>
+                <p><strong>Divergence radiculaire :</strong> Racines divergentes = Favorable (permet l'accès pour le curetage et augmente la stabilité).</p>
+                <p><strong>Hauteur du tronc radiculaire :</strong></p>
+                <ul>
+                    <li><em>Tronc court :</em> Lésion précoce mais accès facile à l'hygiène (favorable pour tunnelisation).</li>
+                    <li><em>Tronc long :</em> Pronostic plus réservé pour la chirurgie résectrice, mais favorable pour la régénération (contenant).</li>
+                </ul>
+                <p><strong>Profondeur de la lésion :</strong> Classe II profonde (5 mm) = Pronostic favorable à la régénération si l'anatomie est contenante.</p>
+                <p><strong>Vitalité :</strong> Positive = Élimine une complication endodontique primaire, simplifie le plan de traitement (pas de dépulpation nécessaire pour hémisection dans l'immédiat).</p>
+            </div>
+        </div>
+
+        <div class="qa-block">
+            <span class="question-title">Question 3 : Stratégie Thérapeutique</span>
+            <p class="question-text">Après réévaluation de la thérapeutique initiale (TPNC), la lésion de furcation persiste à l'identique. Discutez des différentes options chirurgicales conservatrices envisageables pour cette 46. Quelle est la thérapeutique de première intention recommandée par la littérature pour ce type de lésion mandibulaire ?</p>
+            
+            <button class="toggle-btn" onclick="toggleCorrection('q3')">Afficher la réponse</button>
+            
+            <div id="q3" class="correction">
+                <h4>Correction</h4>
+                <p><strong>Options envisageables (Discussion) :</strong></p>
+                <ul>
+                    <li><strong>Lambeau d'assainissement (OFD) :</strong> Accès visuel pour débridement. Souvent insuffisant pour combler une classe II profonde.</li>
+                    <li><strong>Tunnelisation :</strong> Indiquée si tronc radiculaire court et racines divergentes. Expose la furcation pour le brossage interdentaire. Risque de carie radiculaire.</li>
+                    <li><strong>Techniques Résectrices (Hémisection/Amputation) :</strong> Plutôt réservées aux échecs de régénération ou fracture/carie d'une racine. Mutilant (nécessite endo + prothèse).</li>
+                    <li><strong>Régénération Parodontale (RTG/RTI) :</strong> Option de première intention.</li>
+                </ul>
+                
+                <p><strong>Choix thérapeutique (Gold Standard) :</strong> Régénération Tissulaire (RTG ou RTI).</p>
+                <ul>
+                    <li><strong>Justification :</strong> Les lésions de furcation de Classe II mandibulaires répondent favorablement aux techniques de régénération (Membrane ou Dérivés de la Matrice Amélaire +/- Comblement). L'objectif est la fermeture de la furcation ou sa conversion en Classe I nettoyable.</li>
+                    <li><em>Note : Contrairement aux molaires maxillaires (pronostic réservé en régénération), la molaire mandibulaire présente un taux de succès élevé.</em></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="qa-block">
+            <span class="question-title">Question 4 : Maintenance</span>
+            <p class="question-text">Quel protocole de maintenance spécifique instaurez-vous pour ce site si une chirurgie est réalisée ?</p>
+            
+            <button class="toggle-btn" onclick="toggleCorrection('q4')">Afficher la réponse</button>
+            
+            <div id="q4" class="correction">
+                <h4>Correction</h4>
+                <p><strong>Fréquence :</strong> Trimestrielle (tous les 3 mois) la première année.</p>
+                <p><strong>Spécificité du site :</strong></p>
+                <ul>
+                    <li>Éviter le sondage traumatique de la zone régénérée pendant 6 mois.</li>
+                    <li>Surveillance radiographique stricte.</li>
+                    <li><strong>Adaptation de l'hygiène :</strong> Si fermeture incomplète (Classe I résiduelle), prescription de brossettes interdentaires adaptées ou cure-dents de section triangulaire pour nettoyer l'entrée de la furcation.</li>
+                    <li>Contrôle de la vitalité (risque de nécrose tardive post-chirurgicale).</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function toggleCorrection(id) {
+            var x = document.getElementById(id);
+            var btn = x.previousElementSibling;
+            
+            if (x.style.display === "none" || x.style.display === "") {
+                x.style.display = "block";
+                btn.textContent = "Masquer la réponse";
+                btn.style.backgroundColor = "#7f8c8d";
+            } else {
+                x.style.display = "none";
+                btn.textContent = "Afficher la réponse";
+                btn.style.backgroundColor = "#3498db";
+            }
+        }
+    </script>
+    
+    <script src="../script.js"></script>
+
+</body>
+</html>

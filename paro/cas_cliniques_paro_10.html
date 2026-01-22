@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cas N°10 - Parodontologie</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        /* Styles spécifiques pour ce format "Question par Question" */
+        .enonce {
+            background-color: #f8f9fa;
+            border-left: 4px solid #3498db;
+            padding: 20px;
+            border-radius: 4px;
+            margin-bottom: 30px;
+            font-size: 0.95em;
+            line-height: 1.6;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        
+        .qa-block {
+            background-color: #fff;
+            border: 1px solid #eee;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+        }
+
+        .question-title {
+            font-weight: bold;
+            color: #2c3e50;
+            font-size: 1.1em;
+            display: block;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #ecf0f1;
+            padding-bottom: 5px;
+        }
+
+        .question-text {
+            margin-bottom: 15px;
+            color: #34495e;
+        }
+
+        button.toggle-btn {
+            background-color: #3498db;
+            font-size: 0.9em;
+            padding: 8px 20px;
+            margin: 10px 0;
+            width: auto;
+            display: inline-block;
+        }
+        button.toggle-btn:hover {
+            background-color: #2980b9;
+        }
+
+        .correction {
+            display: none;
+            margin-top: 15px;
+            padding: 15px;
+            background-color: #e8f5e9;
+            border-left: 4px solid #27ae60;
+            border-radius: 4px;
+            color: #1b5e20;
+        }
+
+        .correction h4 {
+            margin-top: 0;
+            color: #27ae60;
+            font-size: 1em;
+            text-transform: uppercase;
+            border-bottom: 1px solid #c8e6c9;
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+        }
+
+        ul { margin-top: 5px; margin-bottom: 10px; padding-left: 20px; }
+        li { margin-bottom: 5px; }
+    </style>
+</head>
+<body>
+
+    <script>
+        if (localStorage.getItem('isLoggedIn') !== 'true') {
+            window.location.href = '../index.html';
+        }
+    </script>
+
+    <nav style="background: #2c3e50;">
+        <div class="nav-content">
+            <span class="logo" style="color:white;">Paro - Cas N°10</span>
+            <div class="nav-links">
+                <a href="cas_cliniques_paro.html" class="nav-btn" style="color:white; border-color:white;">&larr; Retour aux Cas</a>
+                <a href="../index.html" class="nav-btn" style="color:white; border-color:white;">Accueil</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <header>
+            <h1>Cas Clinique N°10 : Lésion Intra-Osseuse</h1>
+            <p class="subtitle">Thérapeutique Chirurgicale & Régénération (RTG)</p>
+        </header>
+
+        <div class="enonce">
+            <h3 style="margin-top:0; color:#2c3e50;">ÉNONCÉ DU CAS CLINIQUE</h3>
+            <p>Un patient de 42 ans, non fumeur, en bonne santé générale (ASA 1), est adressé pour la persistance d'une poche parodontale sur la première molaire mandibulaire droite (46) après la réalisation d'un traitement parodontal non chirurgical (détartrage et surfaçage radiculaire) il y a 3 mois.</p>
+            <p>Le patient ne rapporte aucune douleur spontanée mais signale des tassements alimentaires récurrents en mésial de cette dent.</p>
+            <p>L’examen clinique de réévaluation met en évidence une hygiène bucco-dentaire rigoureuse et maîtrisée (Indice de Plaque < 15 %). La gencive est ferme et rose, sans œdème superficiel notable.</p>
+            <p><strong>Les données cliniques spécifiques à la 46 sont les suivantes :</strong></p>
+            <ul>
+                <li><strong>Sondage :</strong> Persistance d'une poche de 8 mm en mésio-vestibulaire et de 7 mm en mésio-lingual.</li>
+                <li><strong>Saignement :</strong> Saignement au sondage (BOP+) sur le site mésial.</li>
+                <li><strong>Mobilité :</strong> Physiologique.</li>
+                <li><strong>Vitalité pulpaire :</strong> Positive aux tests thermiques.</li>
+                <li><strong>Furcation :</strong> L'entrée de la furcation n'est pas sondable (Classe I de Hamp non atteinte).</li>
+            </ul>
+            <p><strong>Examen radiographique :</strong> Le bilan (rétro-alvéolaire centrée sur la 46 avec angulateur) objective une alvéolyse verticale (angulaire) profonde en mésial de la 46. L'angle formé par le défaut osseux et l'axe radiculaire est aigu (< 25°). La composante intra-osseuse du défaut est estimée à 5 mm de hauteur. L'os inter-radiculaire est intact.</p>
+        </div>
+
+        <div class="qa-block">
+            <span class="question-title">Question 1 : Diagnostic</span>
+            <p class="question-text">Quel est votre diagnostic parodontal pour ce patient selon la classification de Chicago 2017 ? Qualifiez précisément la lésion osseuse située en mésial de la 46.</p>
+            
+            <button class="toggle-btn" onclick="toggleCorrection('q1')">Afficher la réponse</button>
+            
+            <div id="q1" class="correction">
+                <h4>Correction</h4>
+                <p><strong>Diagnostic (Chicago 2017) :</strong> Parodontite de Stade III, Grade B, Localisée (ou Généralisée selon le reste de la bouche non décrit, mais le stade III est justifié par la poche &ge; 6mm et la perte osseuse verticale &ge; 3mm).</p>
+                <p><strong>Qualification de la lésion :</strong></p>
+                <ul>
+                    <li>Lésion Intra-Osseuse (LIO) ou Infra-osseuse.</li>
+                    <li>Profonde (Composante intra-osseuse > 3 mm).</li>
+                    <li>Étroite (Angle < 25° radiographique).</li>
+                    <li>Probablement à 2 ou 3 parois osseuses résiduelles (diagnostic de certitude en per-opératoire).</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="qa-block">
+            <span class="question-title">Question 2 : Choix Thérapeutique</span>
+            <p class="question-text">Compte tenu des données cliniques et radiographiques, discutez des options thérapeutiques chirurgicales pour traiter la lésion de la 46. Quelle est votre technique de choix ? Justifiez.</p>
+            
+            <button class="toggle-btn" onclick="toggleCorrection('q2')">Afficher la réponse</button>
+            
+            <div id="q2" class="correction">
+                <h4>Correction</h4>
+                <p><strong>Options envisageables :</strong></p>
+                <ul>
+                    <li><strong>Lambeau d'assainissement (OFD - Open Flap Debridement) :</strong> Accès pour nettoyage, mais cicatrisation par réparation (Long épithélium de jonction) et risque de récession importante.</li>
+                    <li><strong>Chirurgie Régénératrice (RTG ou RTI) :</strong> Comblement, Membrane ou Dérivés de la Matrice Amélaire (Emdogain®).</li>
+                </ul>
+                <p><strong>Technique de choix :</strong> Chirurgie Régénératrice (RTI ou RTG).</p>
+                <p><strong>Justification :</strong></p>
+                <ul>
+                    <li><strong>Indication idéale :</strong> Poche résiduelle > 6 mm avec composante intra-osseuse profonde (> 3 mm).</li>
+                    <li><strong>Facteurs favorables :</strong> Patient non fumeur, bonne hygiène (IP < 15%), défaut étroit et profond (contenant), vitalité conservée.</li>
+                    <li><strong>Objectif :</strong> Gain d'attache clinique significatif et comblement osseux, supérieurs au lambeau d'assainissement seul pour ce type de lésion.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="qa-block">
+            <span class="question-title">Question 3 : Principes Biologiques</span>
+            <p class="question-text">Expliquez le principe de la « Régénération Tissulaire Guidée » (RTG). Quel phénomène biologique cellulaire cherche-t-on à empêcher par la mise en place d'une membrane ?</p>
+            
+            <button class="toggle-btn" onclick="toggleCorrection('q3')">Afficher la réponse</button>
+            
+            <div id="q3" class="correction">
+                <h4>Correction</h4>
+                
+                <p><strong>Principe :</strong> Création d'un espace clos isolé des tissus gingivaux pour favoriser la repousse des tissus profonds.</p>
+                <p><strong>Compétition cellulaire (Melcher 1976) :</strong> Sélectionner les cellules capables de régénérer le parodonte.</p>
+                <p><strong>Phénomène à empêcher :</strong> La migration apicale rapide des cellules épithéliales (et des fibroblastes gingivaux) le long de la racine.</p>
+                <p><strong>Objectif :</strong> Permettre aux cellules du ligament alvéolo-dentaire (cellules desmodontales) et aux cellules osseuses de coloniser l'espace et de former une nouvelle attache (cément, os, ligament).</p>
+            </div>
+        </div>
+
+        <div class="qa-block">
+            <span class="question-title">Question 4 : Pronostic</span>
+            <p class="question-text">Citez les facteurs locaux (liés au défaut osseux) influençant favorablement le résultat de la régénération parodontale.</p>
+            
+            <button class="toggle-btn" onclick="toggleCorrection('q4')">Afficher la réponse</button>
+            
+            <div id="q4" class="correction">
+                <h4>Correction</h4>
+                <p><strong>Facteurs pronostiques locaux (Défaut osseux) :</strong></p>
+                <ul>
+                    <li><strong>Nombre de parois résiduelles :</strong> Plus le nombre est élevé (3 parois), plus le défaut est "contenant" et le pronostic favorable (apport vasculaire et stabilité du caillot).</li>
+                    <li><strong>Profondeur du défaut :</strong> Doit être &ge; 3 mm pour justifier la régénération (bénéfice clinique).</li>
+                    <li><strong>Angle du défaut :</strong> Un angle aigu (< 25°) est plus favorable qu'un défaut large (> 37°).</li>
+                    <li><strong>Espace interdentaire :</strong> La préservation des tissus mous interproximaux (papille) est critique pour recouvrir la membrane/matériau (Technique de préservation papillaire).</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function toggleCorrection(id) {
+            var x = document.getElementById(id);
+            var btn = x.previousElementSibling;
+            
+            if (x.style.display === "none" || x.style.display === "") {
+                x.style.display = "block";
+                btn.textContent = "Masquer la réponse";
+                btn.style.backgroundColor = "#7f8c8d";
+            } else {
+                x.style.display = "none";
+                btn.textContent = "Afficher la réponse";
+                btn.style.backgroundColor = "#3498db";
+            }
+        }
+    </script>
+    
+    <script src="../script.js"></script>
+
+</body>
+</html>

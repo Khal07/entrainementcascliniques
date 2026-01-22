@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cas N°15 - Parodontologie</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        /* Styles spécifiques pour ce format "Question par Question" */
+        .enonce {
+            background-color: #f8f9fa;
+            border-left: 4px solid #3498db;
+            padding: 20px;
+            border-radius: 4px;
+            margin-bottom: 30px;
+            font-size: 0.95em;
+            line-height: 1.6;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        
+        .qa-block {
+            background-color: #fff;
+            border: 1px solid #eee;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+        }
+
+        .question-title {
+            font-weight: bold;
+            color: #2c3e50;
+            font-size: 1.1em;
+            display: block;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #ecf0f1;
+            padding-bottom: 5px;
+        }
+
+        .question-text {
+            margin-bottom: 15px;
+            color: #34495e;
+        }
+
+        button.toggle-btn {
+            background-color: #3498db;
+            font-size: 0.9em;
+            padding: 8px 20px;
+            margin: 10px 0;
+            width: auto;
+            display: inline-block;
+        }
+        button.toggle-btn:hover {
+            background-color: #2980b9;
+        }
+
+        .correction {
+            display: none;
+            margin-top: 15px;
+            padding: 15px;
+            background-color: #e8f5e9;
+            border-left: 4px solid #27ae60;
+            border-radius: 4px;
+            color: #1b5e20;
+        }
+
+        .correction h4 {
+            margin-top: 0;
+            color: #27ae60;
+            font-size: 1em;
+            text-transform: uppercase;
+            border-bottom: 1px solid #c8e6c9;
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+        }
+
+        ul { margin-top: 5px; margin-bottom: 10px; padding-left: 20px; }
+        li { margin-bottom: 5px; }
+    </style>
+</head>
+<body>
+
+    <script>
+        if (localStorage.getItem('isLoggedIn') !== 'true') {
+            window.location.href = '../index.html';
+        }
+    </script>
+
+    <nav style="background: #2c3e50;">
+        <div class="nav-content">
+            <span class="logo" style="color:white;">Paro - Cas N°15</span>
+            <div class="nav-links">
+                <a href="cas_cliniques_paro.html" class="nav-btn" style="color:white; border-color:white;">&larr; Retour aux Cas</a>
+                <a href="../index.html" class="nav-btn" style="color:white; border-color:white;">Accueil</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <header>
+            <h1>Cas Clinique N°15 : Anomalies Muco-Gingivales</h1>
+            <p class="subtitle">Récession Gingivale (Cairo RT1) & Chirurgie Plastique</p>
+        </header>
+
+        <div class="enonce">
+            <h3 style="margin-top:0; color:#2c3e50;">ÉNONCÉ DU CAS CLINIQUE</h3>
+            <p>Une patiente de 24 ans, non fumeuse, en bonne santé générale (ASA 1), consulte pour une gêne esthétique (« dent qui paraît plus longue ») et une sensibilité au froid localisée au niveau de la canine supérieure gauche (23).</p>
+            <p>L'anamnèse révèle un brossage biquotidien vigoureux avec une brosse à dents à brins durs. Elle ne rapporte aucun antécédent de traitement orthodontique.</p>
+            <p>L’examen clinique met en évidence une hygiène bucco-dentaire excellente (Indice de Plaque < 10 %). Le parodonte est fin et festonné. Au niveau de la 23, on observe :</p>
+            <ul>
+                <li>Une récession de la marge gingivale de 4 mm de hauteur et 3 mm de largeur sur la face vestibulaire.</li>
+                <li>La jonction émail-cément (JEC) est visible cliniquement. On note une légère usure de la surface radiculaire (lésion cervicale non carieuse) avec un « coup d'ongle » positif.</li>
+                <li>La bande de tissu kératinisé résiduelle apicalement à la récession est < 1 mm.</li>
+                <li>La gencive marginale est fine, sans signe d'inflammation (BOP négatif).</li>
+                <li>Test de traction des freins (manœuvre de traction de la lèvre) : absence de traction marginale.</li>
+            </ul>
+            <p><strong>Le bilan parodontal de la 23 montre :</strong></p>
+            <ul>
+                <li><strong>Sondage :</strong> Profondeur de sondage vestibulaire de 1 mm.</li>
+                <li><strong>Niveau d'attache interproximal :</strong> Aucune perte d'attache clinique n'est détectée sur les faces mésiale et distale de la 23. Les papilles remplissent les embrasures.</li>
+                <li><strong>Mobilité :</strong> Physiologique.</li>
+            </ul>
+            <p><strong>Examen radiographique :</strong> L'examen (rétro-alvéolaire de la 23) confirme l'intégrité des septa osseux interdentaires. La hauteur de l'os interproximal est normale (distance JEC-Crête < 2 mm).</p>
+        </div>
+
+        <div class="qa-block">
+            <span class="question-title">Question 1 : Diagnostic</span>
+            <p class="question-text">Quel est votre diagnostic précis pour la lésion de la 23 selon la classification de Chicago 2017 (Cairo) ? Justifiez votre réponse en expliquant le critère discriminant principal. À quelle classe de Miller cela correspond-il ?</p>
+            
+            <button class="toggle-btn" onclick="toggleCorrection('q1')">Afficher la réponse</button>
+            
+            <div id="q1" class="correction">
+                <h4>Correction</h4>
+                <p><strong>Diagnostic (Chicago 2017) :</strong> Récession gingivale de type 1 (RT1) de Cairo.</p>
+                
+                <p><strong>Justification :</strong></p>
+                <ul>
+                    <li>Le critère discriminant est l'absence de perte d'attache interproximale.</li>
+                    <li>La jonction émail-cément (JEC) interproximale n'est pas visible cliniquement.</li>
+                </ul>
+                <p><strong>Correspondance Miller :</strong> Classe I.</p>
+                <ul>
+                    <li>La récession n'atteint pas la ligne muco-gingivale (supposé ici vu la hauteur de 4mm et la présence résiduelle de TK).</li>
+                    <li>Ou Classe II si elle l'atteint, mais le point clé est l'intégrité des papilles.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="qa-block">
+            <span class="question-title">Question 2 : Étiopathogénie</span>
+            <p class="question-text">Analysez les facteurs étiologiques ayant contribué à l'apparition de cette lésion. Distinguez les facteurs prédisposants des facteurs déclenchants dans ce cas clinique.</p>
+            
+            <button class="toggle-btn" onclick="toggleCorrection('q2')">Afficher la réponse</button>
+            
+            <div id="q2" class="correction">
+                <h4>Correction</h4>
+                <p><strong>Facteurs prédisposants (Terrain) :</strong></p>
+                <ul>
+                    <li>Phénotype parodontal fin et festonné : Gencive fine, os vestibulaire fin (déhiscence osseuse potentielle).</li>
+                    <li>Absence/Faible hauteur de tissu kératinisé : < 1 mm, rendant la marge gingivale moins résistante.</li>
+                    <li><em>(Note : Pas de malposition ou de traction de frein mentionnée ici).</em></li>
+                </ul>
+                <p><strong>Facteurs déclenchants (Traumatisme) :</strong></p>
+                <ul>
+                    <li><strong>Brossage traumatique :</strong> Utilisation d'une brosse à brins durs + brossage vigoureux.</li>
+                    <li>Ceci est corroboré par la présence d'une usure radiculaire (abrasion) et la localisation (canine, souvent proéminente).</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="qa-block">
+            <span class="question-title">Question 3 : Thérapeutique</span>
+            <p class="question-text">Quel est votre objectif thérapeutique principal ? Citez la technique chirurgicale considérée comme le « Gold Standard » pour traiter ce type de récession unitaire. Justifiez ce choix par rapport aux autres techniques disponibles.</p>
+            
+            <button class="toggle-btn" onclick="toggleCorrection('q3')">Afficher la réponse</button>
+            
+            <div id="q3" class="correction">
+                <h4>Correction</h4>
+                <p><strong>Objectifs :</strong> Recouvrement radiculaire complet (esthétique + traitement de l'hypersensibilité) et augmentation de la hauteur/épaisseur de tissu kératinisé.</p>
+                <p><strong>Pré-requis :</strong> Changement des habitudes de brossage (brosse souple, technique de rouleau) avant toute chirurgie (Phase étiologique).</p>
+                <p><strong>Technique "Gold Standard" :</strong> Lambeau Positionné Coronairement + Greffon Conjonctif enfoui (LPC + GC).</p>
+                
+                <p><strong>Justification :</strong></p>
+                <ul>
+                    <li>Le LPC seul donne de bons résultats mais le taux de recouvrement complet et la stabilité à long terme sont significativement augmentés par l'ajout du greffon conjonctif (surtout sur phénotype fin pour augmenter l'épaisseur).</li>
+                    <li>La greffe épithélio-conjonctive est écartée car le résultat esthétique est médiocre (aspect "rustine", dyschromie).</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="qa-block">
+            <span class="question-title">Question 4 : Pronostic</span>
+            <p class="question-text">Quels sont les facteurs pronostiques locaux influençant le taux de recouvrement radiculaire ? Quel résultat pouvez-vous espérer dans ce cas précis ?</p>
+            
+            <button class="toggle-btn" onclick="toggleCorrection('q4')">Afficher la réponse</button>
+            
+            <div id="q4" class="correction">
+                <h4>Correction</h4>
+                <p><strong>Facteurs pronostiques locaux :</strong></p>
+                <ul>
+                    <li><strong>Classification (Type de récession) :</strong> RT1 (Papilles intactes) est le facteur le plus favorable.</li>
+                    <li>Hauteur et largeur de la récession.</li>
+                    <li>Niveau osseux interproximal.</li>
+                    <li>Épaisseur du lambeau.</li>
+                    <li>Présence d'une lésion cervicale non carieuse (LCNC) : La perte de substance (marche) peut compliquer l'adaptation du lambeau si elle n'est pas traitée (composite) ou régularisée.</li>
+                </ul>
+                <p><strong>Résultat espéré :</strong> Recouvrement complet (100%) prévisible.</p>
+                <ul>
+                    <li>Car RT1 (os interproximal intact) + Patient non fumeur + Bonne hygiène.</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function toggleCorrection(id) {
+            var x = document.getElementById(id);
+            var btn = x.previousElementSibling;
+            
+            if (x.style.display === "none" || x.style.display === "") {
+                x.style.display = "block";
+                btn.textContent = "Masquer la réponse";
+                btn.style.backgroundColor = "#7f8c8d";
+            } else {
+                x.style.display = "none";
+                btn.textContent = "Afficher la réponse";
+                btn.style.backgroundColor = "#3498db";
+            }
+        }
+    </script>
+    
+    <script src="../script.js"></script>
+
+</body>
+</html>

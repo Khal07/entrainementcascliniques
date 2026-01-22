@@ -3,34 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Accueil - Révisions Internat</title>
+    <title>Internat Odontologie - Dashboard</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <nav>
-        <ul>
-            <li><a href="index.html">Accueil</a></li>
-            <li><a href="cas_cliniques.html">Cas Cliniques</a></li>
-        </ul>
-    </nav>
-
-    <div class="container">
-        <header>
-            <h1>Bienvenue Dr.</h1>
-            <p>Plateforme de révision - Chirurgie Orale</p>
-        </header>
-
-        <div class="exercise-card">
-            <h2>Par quoi commencer aujourd'hui ?</h2>
-            <p>Sélectionnez une catégorie ci-dessus ou cliquez sur un module :</p>
-            
-            <ul>
-                <li><strong><a href="cas_cliniques.html">Cas Cliniques (5 Dossiers)</a></strong> : Entraînement type concours avec corrections détaillées.</li>
-            </ul>
+    <div id="login-screen">
+        <div class="login-box">
+            <div class="login-icon">🔒</div>
+            <h2>Accès Réservé</h2>
+            <p>Veuillez entrer le code d'accès.</p>
+            <input type="password" id="passcode" placeholder="Code...">
+            <button onclick="checkCode()">Entrer</button>
+            <p id="error-msg" class="error"></p>
         </div>
     </div>
 
-</body>
+    <div id="app-content" style="display: none;">
+        
+        <nav>
+            <div class="nav-content">
+                <span class="logo">🦷 Internat Révisions</span>
+                <button onclick="logout()" class="logout-btn">Déconnexion</button>
+            </div>
+        </nav>
 
+        <div class="container">
+            <header>
+                <h1>Bienvenue Docteur</h1>
+                <p class="subtitle">Sélectionnez une discipline pour commencer l'entraînement.</p>
+            </header>
+
+            <div class="grid-menu">
+                
+                <a href="chir/cas_cliniques_chir.html" class="card">
+                    <div class="card-img-wrapper">
+                        <img src="IMG/chir.png" alt="Chirurgie Orale">
+                    </div>
+                    <h3>Chirurgie Orale</h3>
+                    <span class="badge">Disponibles</span>
+                </a>
+
+                <a href="paro/cas_cliniques_paro.html" class="card">
+                    <div class="card-img-wrapper">
+                        <img src="IMG/paro.png" alt="Parodontologie">
+                    </div>
+                    <h3>Parodontologie</h3>
+                    <span class="badge">Disponibles</span>
+                </a>
+
+                <a href="#" class="card disabled">
+                    <div class="card-img-wrapper">
+                        <img src="IMG/prothese.png" alt="Prothèse">
+                    </div>
+                    <h3>Prothèse</h3>
+                    <span class="badge gray">Bientôt</span>
+                </a>
+
+                <a href="#" class="card disabled">
+                    <div class="card-img-wrapper">
+                        <img src="IMG/oc.png" alt="OC-Endo">
+                    </div>
+                    <h3>OC / Endo</h3>
+                    <span class="badge gray">Bientôt</span>
+                </a>
+
+                <a href="#" class="card disabled">
+                    <div class="card-img-wrapper">
+                        <img src="IMG/pedo.png" alt="Pédodontie">
+                    </div>
+                    <h3>Pédodontie</h3>
+                    <span class="badge gray">Bientôt</span>
+                </a>
+
+                <a href="#" class="card disabled">
+                    <div class="card-img-wrapper">
+                        <img src="IMG/ortho.png" alt="Orthodontie">
+                    </div>
+                    <h3>Orthodontie</h3>
+                    <span class="badge gray">Bientôt</span>
+                </a>
+
+                <a href="#" class="card disabled">
+                    <div class="card-img-wrapper">
+                        <img src="IMG/lca.png" alt="LCA">
+                    </div>
+                    <h3>LCA</h3>
+                    <span class="badge gray">Bientôt</span>
+                </a>
+
+            </div>
+        </div>
+        
+        <footer>
+            <p>&copy; 2025 - Plateforme de Révision Internat</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
 </html>

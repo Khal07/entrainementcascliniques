@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cas N°11 - Parodontologie</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        /* Styles spécifiques pour ce format "Question par Question" */
+        .enonce {
+            background-color: #f8f9fa;
+            border-left: 4px solid #3498db;
+            padding: 20px;
+            border-radius: 4px;
+            margin-bottom: 30px;
+            font-size: 0.95em;
+            line-height: 1.6;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        
+        .qa-block {
+            background-color: #fff;
+            border: 1px solid #eee;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+        }
+
+        .question-title {
+            font-weight: bold;
+            color: #2c3e50;
+            font-size: 1.1em;
+            display: block;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #ecf0f1;
+            padding-bottom: 5px;
+        }
+
+        .question-text {
+            margin-bottom: 15px;
+            color: #34495e;
+        }
+
+        button.toggle-btn {
+            background-color: #3498db;
+            font-size: 0.9em;
+            padding: 8px 20px;
+            margin: 10px 0;
+            width: auto;
+            display: inline-block;
+        }
+        button.toggle-btn:hover {
+            background-color: #2980b9;
+        }
+
+        .correction {
+            display: none;
+            margin-top: 15px;
+            padding: 15px;
+            background-color: #e8f5e9;
+            border-left: 4px solid #27ae60;
+            border-radius: 4px;
+            color: #1b5e20;
+        }
+
+        .correction h4 {
+            margin-top: 0;
+            color: #27ae60;
+            font-size: 1em;
+            text-transform: uppercase;
+            border-bottom: 1px solid #c8e6c9;
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+        }
+
+        ul { margin-top: 5px; margin-bottom: 10px; padding-left: 20px; }
+        li { margin-bottom: 5px; }
+    </style>
+</head>
+<body>
+
+    <script>
+        if (localStorage.getItem('isLoggedIn') !== 'true') {
+            window.location.href = '../index.html';
+        }
+    </script>
+
+    <nav style="background: #2c3e50;">
+        <div class="nav-content">
+            <span class="logo" style="color:white;">Paro - Cas N°11</span>
+            <div class="nav-links">
+                <a href="cas_cliniques_paro.html" class="nav-btn" style="color:white; border-color:white;">&larr; Retour aux Cas</a>
+                <a href="../index.html" class="nav-btn" style="color:white; border-color:white;">Accueil</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <header>
+            <h1>Cas Clinique N°11 : Interactions Paro-Prothèse</h1>
+            <p class="subtitle">Espace Biologique (Attache Supracrestale) & Élongation Coronaire</p>
+        </header>
+
+        <div class="enonce">
+            <h3 style="margin-top:0; color:#2c3e50;">ÉNONCÉ DU CAS CLINIQUE</h3>
+            <p>Une patiente de 35 ans, non fumeuse, en bonne santé générale (ASA 1), consulte suite à la fracture de sa deuxième prémolaire maxillaire gauche (25). Elle ne rapporte pas de douleur spontanée mais une gêne esthétique et fonctionnelle.</p>
+            <p>L’examen clinique révèle une hygiène bucco-dentaire satisfaisante (Indice de Plaque < 20 %). Au niveau de la 25, on observe une fracture coronaire oblique s'étendant en sous-gingival au niveau de la face palatine. La limite de la fracture se situe cliniquement sous la marge gingivale. Le tissu gingival en regard de la fracture est légèrement érythémateux et saigne au sondage ponctuel. Le sondage osseux (trans-gingival) sous anesthésie met en évidence que la limite cervicale saine résiduelle de la dent se situe à moins de 1 mm de la crête osseuse alvéolaire en palatin. Le parodonte est de type fin et festonné dans ce secteur.</p>
+            <p><strong>Les données parodontales générales sont les suivantes :</strong></p>
+            <ul>
+                <li><strong>Sondage :</strong> Profondeurs de poche physiologiques (< 3 mm) sur le reste de la denture.</li>
+                <li><strong>Mobilité :</strong> Aucune mobilité sur la 25.</li>
+                <li><strong>Gencive attachée :</strong> Bande de tissu kératinisé de 4 mm de hauteur en vestibulaire de la 25.</li>
+            </ul>
+            <p><strong>Examen radiographique :</strong> L'examen (rétro-alvéolaire de la 25) montre un traitement endodontique de qualité satisfaisante (obturation dense et à l'apex). Aucune image radio-claire péri-apicale n'est visible. Le niveau osseux interproximal est normal. La fracture intéresse le tiers coronaire de la racine mais le rapport couronne/racine reste favorable.</p>
+        </div>
+
+        <div class="qa-block">
+            <span class="question-title">Question 1 : Analyse</span>
+            <p class="question-text">Analysez la situation clinique de la 25 en définissant le concept anatomique et histologique qui est violé dans cette situation. Précisez les dimensions physiologiques de cette entité selon le Référentiel.</p>
+            
+            <button class="toggle-btn" onclick="toggleCorrection('q1')">Afficher la réponse</button>
+            
+            <div id="q1" class="correction">
+                <h4>Correction</h4>
+                <p><strong>Diagnostic de la situation :</strong> Violation de l'attache supracrestale (anciennement espace biologique).</p>
+                <p><strong>Justification :</strong> La limite saine de la dent se situe à < 1 mm de la crête osseuse (sondage osseux), alors qu'un espace minimum est requis pour l'attache des tissus mous.</p>
+                <p><strong>Définition et Dimensions (Gargiulo 1961 / Vacek 1994) :</strong></p>
+                <p>L'attache supracrestale est composée de deux entités histologiques :</p>
+                <ul>
+                    <li><strong>Attache épithéliale (Épithélium de jonction) :</strong> ~ 1 mm (0,97 mm).</li>
+                    <li><strong>Attache conjonctive :</strong> ~ 1 mm (1,07 mm).</li>
+                </ul>
+                
+                <p><strong>Total :</strong> Environ 2 mm au-dessus de la crête osseuse.</p>
+                <p><strong>Note clinique :</strong> Il faut ajouter la profondeur du sulcus (~1 mm) soit une distance nécessaire de <strong>3 mm</strong> entre la limite prothétique et la crête osseuse.</p>
+            </div>
+        </div>
+
+        <div class="qa-block">
+            <span class="question-title">Question 2 : Conséquences</span>
+            <p class="question-text">Quelles seraient les conséquences parodontales si une restauration prothétique (couronne) était réalisée directement sur la limite de fracture actuelle, sans aménagement tissulaire préalable ?</p>
+            
+            <button class="toggle-btn" onclick="toggleCorrection('q2')">Afficher la réponse</button>
+            
+            <div id="q2" class="correction">
+                <h4>Correction</h4>
+                <p>Si la prothèse est réalisée sans aménagement (limite juxta-osseuse) :</p>
+                <ul>
+                    <li><strong>Inflammation chronique :</strong> Gingivite marginale persistante, érythème, saignement, due à l'impossibilité pour l'attache épithélio-conjonctive de se reformer physiologiquement.</li>
+                    <li><strong>Perte osseuse (Remodelage incontrôlé) :</strong> L'os va se résorber pour recréer l'espace nécessaire à l'attache supracrestale, entraînant une perte de support.</li>
+                    <li><strong>Récession gingivale ou Poche parodontale :</strong> Selon le phénotype (fin vs épais), l'inflammation conduira soit à une récession (inesthétique), soit à la formation d'une poche.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="qa-block">
+            <span class="question-title">Question 3 : Options Thérapeutiques</span>
+            <p class="question-text">Discutez les différentes options thérapeutiques pour conserver et restaurer cette dent. Quelle technique chirurgicale est la plus indiquée ici ? Justifiez votre choix par rapport aux autres options chirurgicales.</p>
+            
+            <button class="toggle-btn" onclick="toggleCorrection('q3')">Afficher la réponse</button>
+            
+            <div id="q3" class="correction">
+                <h4>Correction</h4>
+                <p><strong>Options de conservation :</strong></p>
+                <ul>
+                    <li>Élongation coronaire chirurgicale.</li>
+                    <li>Égression (extrusion) orthodontique.</li>
+                </ul>
+                <p><strong>Technique chirurgicale indiquée :</strong> Lambeau déplacé apicalement avec ostéoectomie/ostéoplastie.</p>
+                <p><strong>Justification et Diagnostic différentiel chirurgical :</strong></p>
+                <ul>
+                    <li><strong>Gingivectomie simple ? NON.</strong> Contre-indiquée car la distance os-limite est insuffisante (< 3mm). Une gingivectomie ne traiterait que les tissus mous, l'os doit être remodelé.</li>
+                    <li><strong>Lambeau déplacé apicalement seul ? NON.</strong> Nécessité de soustraire de l'os (ostéoectomie) pour recréer l'espace biologique.</li>
+                    <li><strong>Pourquoi cette technique ?</strong> Permet d'accéder à la crête osseuse, de réduire la hauteur osseuse de manière contrôlée et de repositionner la gencive apicalement pour exposer la limite saine, tout en préservant la bande de tissu kératinisé existante (4mm).</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="qa-block">
+            <span class="question-title">Question 4 : Protocole</span>
+            <p class="question-text">Détaillez les temps opératoires de la technique chirurgicale choisie pour l'aménagement de la 25.</p>
+            
+            <button class="toggle-btn" onclick="toggleCorrection('q4')">Afficher la réponse</button>
+            
+            <div id="q4" class="correction">
+                <h4>Correction</h4>
+                <p><strong>Protocole opératoire (Élongation coronaire) :</strong></p>
+                <ul>
+                    <li><strong>Incisions :</strong>
+                        <ul>
+                            <li>Intra-sulculaire en vestibulaire et palatin.</li>
+                            <li>Incisions de décharge verticales (au delà de la ligne muco-gingivale) pour permettre le déplacement apical du lambeau sans tension.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Décollement :</strong> Lambeau d'épaisseur totale (muco-périosté) pour exposer la crête osseuse et la fracture.</li>
+                    <li><strong>Ostéoplastie / Ostéoectomie (Temps osseux) :</strong>
+                        <ul>
+                            <li>Élimination de l'os de support (Ostéoectomie) à l'aide de fraises boule diamantée ou ciseaux à os (Ochsenbein).</li>
+                            <li><strong>Objectif :</strong> Rétablir une distance de <strong>3 mm</strong> entre la crête osseuse et la future limite prothétique (limite de fracture) sur tout le pourtour concerné.</li>
+                            <li>Ostéoplastie pour affiner l'architecture osseuse (feston) et éviter les surépaisseurs.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Sutures :</strong>
+                        <ul>
+                            <li>Repositionnement du lambeau apicalement (au niveau de la crête osseuse nouvellement définie).</li>
+                            <li>Sutures périostées ou matelassier vertical pour stabiliser le lambeau en position apicale.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Cicatrisation :</strong> Attente de la maturation tissulaire (minimum 6 semaines à 3-6 mois pour le secteur esthétique) avant la prothèse définitive.</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function toggleCorrection(id) {
+            var x = document.getElementById(id);
+            var btn = x.previousElementSibling;
+            
+            if (x.style.display === "none" || x.style.display === "") {
+                x.style.display = "block";
+                btn.textContent = "Masquer la réponse";
+                btn.style.backgroundColor = "#7f8c8d";
+            } else {
+                x.style.display = "none";
+                btn.textContent = "Afficher la réponse";
+                btn.style.backgroundColor = "#3498db";
+            }
+        }
+    </script>
+    
+    <script src="../script.js"></script>
+
+</body>
+</html>

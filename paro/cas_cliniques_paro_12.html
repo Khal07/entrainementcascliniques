@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cas N°12 - Parodontologie</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        /* Styles spécifiques pour ce format "Question par Question" */
+        .enonce {
+            background-color: #f8f9fa;
+            border-left: 4px solid #3498db;
+            padding: 20px;
+            border-radius: 4px;
+            margin-bottom: 30px;
+            font-size: 0.95em;
+            line-height: 1.6;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        
+        .qa-block {
+            background-color: #fff;
+            border: 1px solid #eee;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+        }
+
+        .question-title {
+            font-weight: bold;
+            color: #2c3e50;
+            font-size: 1.1em;
+            display: block;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #ecf0f1;
+            padding-bottom: 5px;
+        }
+
+        .question-text {
+            margin-bottom: 15px;
+            color: #34495e;
+        }
+
+        button.toggle-btn {
+            background-color: #3498db;
+            font-size: 0.9em;
+            padding: 8px 20px;
+            margin: 10px 0;
+            width: auto;
+            display: inline-block;
+        }
+        button.toggle-btn:hover {
+            background-color: #2980b9;
+        }
+
+        .correction {
+            display: none;
+            margin-top: 15px;
+            padding: 15px;
+            background-color: #e8f5e9;
+            border-left: 4px solid #27ae60;
+            border-radius: 4px;
+            color: #1b5e20;
+        }
+
+        .correction h4 {
+            margin-top: 0;
+            color: #27ae60;
+            font-size: 1em;
+            text-transform: uppercase;
+            border-bottom: 1px solid #c8e6c9;
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+        }
+
+        ul { margin-top: 5px; margin-bottom: 10px; padding-left: 20px; }
+        li { margin-bottom: 5px; }
+    </style>
+</head>
+<body>
+
+    <script>
+        if (localStorage.getItem('isLoggedIn') !== 'true') {
+            window.location.href = '../index.html';
+        }
+    </script>
+
+    <nav style="background: #2c3e50;">
+        <div class="nav-content">
+            <span class="logo" style="color:white;">Paro - Cas N°12</span>
+            <div class="nav-links">
+                <a href="cas_cliniques_paro.html" class="nav-btn" style="color:white; border-color:white;">&larr; Retour aux Cas</a>
+                <a href="../index.html" class="nav-btn" style="color:white; border-color:white;">Accueil</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <header>
+            <h1>Cas Clinique N°12 : Urgence Parodontale</h1>
+            <p class="subtitle">Abcès Parodontal - Gestion sans antibiotiques (CNEP 2024)</p>
+        </header>
+
+        <div class="enonce">
+            <h3 style="margin-top:0; color:#2c3e50;">ÉNONCÉ DU CAS CLINIQUE</h3>
+            <p>Un patient de 52 ans, fumeur (15 cigarettes/jour), sans antécédent médical contributif (ASA 1), consulte en urgence pour une douleur pulsatile et une tuméfaction gingivale localisée au maxillaire droit, apparue il y a 48 heures.</p>
+            <p>Le patient rapporte une sensation de « dent longue » et une douleur à la mastication sur la 16. Il signale ne pas avoir de fièvre et ne ressent pas de fatigue inhabituelle.</p>
+            <p>L’examen clinique met en évidence une hygiène bucco-dentaire moyenne. Au niveau de la 16, on observe :</p>
+            <ul>
+                <li>Une tuméfaction gingivale ovoïde, rouge et luisante, située en regard de la racine mésio-vestibulaire, proche de la ligne muco-gingivale.</li>
+                <li>La tuméfaction est fluctuante à la palpation et une pression digitale provoque l'exsudation de pus par le sulcus.</li>
+            </ul>
+            <p><strong>Données cliniques de la 16 :</strong></p>
+            <ul>
+                <li><strong>Sondage :</strong> Poche parodontale de 8 mm en mésio-vestibulaire. Les autres sites de la dent présentent des profondeurs de 4 à 5 mm.</li>
+                <li><strong>Mobilité :</strong> Classe III.</li>
+                <li><strong>Vitalité pulpaire :</strong> La 16 répond positivement aux tests thermiques (froid).</li>
+                <li><strong>Percussion :</strong> Sensibilité positive à la percussion axiale et latérale.</li>
+            </ul>
+            <p><strong>Examen radiographique :</strong> Le cliché rétro-alvéolaire de la 16 objective une perte osseuse angulaire (verticale) le long de la racine mésio-vestibulaire atteignant le tiers apical. On note une image radioclaire latérale diffuse en regard de la racine. L'espace desmodontal est élargi. Aucune image de carie ou de restauration défectueuse n'est visible.</p>
+        </div>
+
+        <div class="qa-block">
+            <span class="question-title">Question 1 : Diagnostic</span>
+            <p class="question-text">Quel est votre diagnostic précis pour la pathologie affectant la 16 selon la classification de Chicago 2017 ? Justifiez votre réponse en excluant le principal diagnostic différentiel.</p>
+            
+            <button class="toggle-btn" onclick="toggleCorrection('q1')">Afficher la réponse</button>
+            
+            <div id="q1" class="correction">
+                <h4>Correction</h4>
+                <p><strong>Diagnostic :</strong> Abcès Parodontal (chez un patient parodontal).</p>
+                <p><strong>Justification :</strong></p>
+                <ul>
+                    <li><strong>Signes cliniques :</strong> Tuméfaction gingivale ovoïde latérale, suppuration au sondage/pression, douleur, poche profonde préexistante probable.</li>
+                    <li><strong>Vitalité :</strong> Positive. C'est l'élément clé.</li>
+                </ul>
+                <p><strong>Diagnostic différentiel exclu :</strong> Abcès péri-apical (d'origine endodontique) ou Lésion Endo-Parodontale.</p>
+                <ul>
+                    <li><strong>Exclusion :</strong> La vitalité pulpaire est conservée, ce qui élimine une nécrose pulpaire primaire.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="qa-block">
+            <span class="question-title">Question 2 : Physiopathologie</span>
+            <p class="question-text">Décrivez le mécanisme de formation de cette lésion aiguë. Quels sont les facteurs locaux et généraux ayant pu favoriser son apparition chez ce patient ?</p>
+            
+            <button class="toggle-btn" onclick="toggleCorrection('q2')">Afficher la réponse</button>
+            
+            <div id="q2" class="correction">
+                <h4>Correction</h4>
+                
+                <p><strong>Mécanisme :</strong></p>
+                <ul>
+                    <li>Obstruction de l'orifice d'une poche parodontale profonde (ex: calcul, corps étranger) ou modification de la flore bactérienne (virulence).</li>
+                    <li>Accumulation de pus (neutrophiles + bactéries) dans la paroi molle de la poche due à l'impossibilité de drainage naturel.</li>
+                    <li>Destruction rapide du tissu conjonctif et de l'os alvéolaire par l'infiltrat inflammatoire aigu.</li>
+                </ul>
+                <p><strong>Facteurs de risque :</strong></p>
+                <ul>
+                    <li><strong>Local :</strong> Poche parodontale profonde (8 mm), anatomie radiculaire (furcation potentielle sur 16), tortuosité de la poche.</li>
+                    <li><strong>Général :</strong> Tabac (15 cig/j). Altère la réponse immunitaire (PNN) et la vascularisation.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="qa-block">
+            <span class="question-title">Question 3 : Prise en charge immédiate</span>
+            <p class="question-text">Détaillez votre prise en charge de l'urgence au fauteuil. Devez-vous prescrire une antibiothérapie systémique ? Justifiez votre réponse selon les recommandations CNEP SFPIO 2024.</p>
+            
+            <button class="toggle-btn" onclick="toggleCorrection('q3')">Afficher la réponse</button>
+            
+            <div id="q3" class="correction">
+                <h4>Correction</h4>
+                <p><strong>Geste local (Prioritaire) :</strong></p>
+                <ul>
+                    <li><strong>Drainage :</strong> Soit par la poche (si ouverte), soit par incision externe de la tuméfaction fluctuante.</li>
+                    <li><strong>Débridement :</strong> Instrumentation ultrasonore ou manuelle soigneuse pour éliminer le tartre/corps étranger et permettre l'évacuation du pus.</li>
+                    <li><strong>Irrigation :</strong> Antiseptique (Chlorhexidine ou Bétadine) dans la poche.</li>
+                    <li><strong>Ajustement occlusal :</strong> Si la dent est en surocclusion (sensation de dent longue) pour soulager la douleur.</li>
+                </ul>
+                <p><strong>Antibiothérapie Systémique : NON.</strong></p>
+                <ul>
+                    <li><strong>Justification (CNEP SFPIO 2024 - QC 1) :</strong> Le patient est apyrétique et en bonne santé générale (pas d'adénopathie mentionnée, pas de trismus, pas de cellulite extensive). Le traitement local seul suffit.</li>
+                    <li><strong>Prescription :</strong> Antalgiques (Paracétamol) + Bain de bouche chlorhexidine 0,12%.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="qa-block">
+            <span class="question-title">Question 4 : Pronostic et Suivi</span>
+            <p class="question-text">Après résolution de la phase aiguë, quelle est la suite de votre plan de traitement ? Quels facteurs influencent le pronostic de conservation de cette dent ?</p>
+            
+            <button class="toggle-btn" onclick="toggleCorrection('q4')">Afficher la réponse</button>
+            
+            <div id="q4" class="correction">
+                <h4>Correction</h4>
+                <p><strong>Plan de traitement ultérieur :</strong></p>
+                <ul>
+                    <li>Réévaluation à 1 semaine (résolution symptômes).</li>
+                    <li>Traitement Parodontal Non Chirurgical (TPNC) global (détartrage/surfaçage complet) car le patient présente probablement une parodontite généralisée sous-jacente.</li>
+                    <li>Réévaluation à 3 mois.</li>
+                    <li>Chirurgie parodontale éventuelle (lambeau d'assainissement ou régénération) si la poche persiste > 5-6 mm.</li>
+                </ul>
+                <p><strong>Facteurs pronostiques de la 16 :</strong></p>
+                <ul>
+                    <li><strong>Niveau de perte osseuse :</strong> Ici tiers apical (sévère) &rightarrow; Pronostic réservé.</li>
+                    <li><strong>Mobilité :</strong> Classe III (défavorable, mais peut réduire après phase aiguë).</li>
+                    <li><strong>Tabac :</strong> Facteur de risque majeur d'échec ou de récidive.</li>
+                    <li><strong>Motivation du patient :</strong> Arrêt du tabac et observance de l'hygiène.</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function toggleCorrection(id) {
+            var x = document.getElementById(id);
+            var btn = x.previousElementSibling;
+            
+            if (x.style.display === "none" || x.style.display === "") {
+                x.style.display = "block";
+                btn.textContent = "Masquer la réponse";
+                btn.style.backgroundColor = "#7f8c8d";
+            } else {
+                x.style.display = "none";
+                btn.textContent = "Afficher la réponse";
+                btn.style.backgroundColor = "#3498db";
+            }
+        }
+    </script>
+    
+    <script src="../script.js"></script>
+
+</body>
+</html>

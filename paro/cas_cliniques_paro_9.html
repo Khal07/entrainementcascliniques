@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cas N°9 - Parodontologie</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        /* Styles spécifiques pour ce format "Question par Question" */
+        .enonce {
+            background-color: #f8f9fa;
+            border-left: 4px solid #3498db;
+            padding: 20px;
+            border-radius: 4px;
+            margin-bottom: 30px;
+            font-size: 0.95em;
+            line-height: 1.6;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        
+        .qa-block {
+            background-color: #fff;
+            border: 1px solid #eee;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+        }
+
+        .question-title {
+            font-weight: bold;
+            color: #2c3e50;
+            font-size: 1.1em;
+            display: block;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #ecf0f1;
+            padding-bottom: 5px;
+        }
+
+        .question-text {
+            margin-bottom: 15px;
+            color: #34495e;
+        }
+
+        button.toggle-btn {
+            background-color: #3498db;
+            font-size: 0.9em;
+            padding: 8px 20px;
+            margin: 10px 0;
+            width: auto;
+            display: inline-block;
+        }
+        button.toggle-btn:hover {
+            background-color: #2980b9;
+        }
+
+        .correction {
+            display: none;
+            margin-top: 15px;
+            padding: 15px;
+            background-color: #e8f5e9;
+            border-left: 4px solid #27ae60;
+            border-radius: 4px;
+            color: #1b5e20;
+        }
+
+        .correction h4 {
+            margin-top: 0;
+            color: #27ae60;
+            font-size: 1em;
+            text-transform: uppercase;
+            border-bottom: 1px solid #c8e6c9;
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+        }
+
+        ul { margin-top: 5px; margin-bottom: 10px; padding-left: 20px; }
+        li { margin-bottom: 5px; }
+    </style>
+</head>
+<body>
+
+    <script>
+        if (localStorage.getItem('isLoggedIn') !== 'true') {
+            window.location.href = '../index.html';
+        }
+    </script>
+
+    <nav style="background: #2c3e50;">
+        <div class="nav-content">
+            <span class="logo" style="color:white;">Paro - Cas N°9</span>
+            <div class="nav-links">
+                <a href="cas_cliniques_paro.html" class="nav-btn" style="color:white; border-color:white;">&larr; Retour aux Cas</a>
+                <a href="../index.html" class="nav-btn" style="color:white; border-color:white;">Accueil</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <header>
+            <h1>Cas Clinique N°9 : Interaction Paro-Diabète</h1>
+            <p class="subtitle">Relation bidirectionnelle & Prise en charge (CNEP 2024)</p>
+        </header>
+
+        <div class="enonce">
+            <h3 style="margin-top:0; color:#2c3e50;">ÉNONCÉ DU CAS CLINIQUE</h3>
+            <p>Un patient de 58 ans, en surpoids (IMC = 29), traité pour un diabète de type 2 depuis 10 ans, est adressé par son diabétologue avant une intervention chirurgicale orthopédique. Le patient se plaint de saignements gingivaux spontanés, d'une mauvaise haleine et de mobilités dentaires diffuses.</p>
+            <p>L'anamnèse révèle un contrôle glycémique irrégulier. Le dernier bilan biologique, datant d'il y a 3 semaines, indique un taux d'hémoglobine glyquée (HbA1c) de 8,2 %. Le patient rapporte également une sensation de "bouche sèche".</p>
+            <p>L’examen clinique met en évidence une hygiène bucco-dentaire insuffisante (Indice de Plaque = 85 %). La gencive apparaît rouge, vernissée et œdématiée de manière généralisée. On note une xérostomie clinique (signe du miroir positif).</p>
+            <p><strong>Le bilan parodontal révèle :</strong></p>
+            <ul>
+                <li><strong>Sondage :</strong> Profondeurs de poche (PPD) généralisées comprises entre 5 et 8 mm.</li>
+                <li><strong>Saignement :</strong> Saignement au sondage (BOP) sur 75 % des sites. suppuration sur les 16, 26, 36 et 46.</li>
+                <li><strong>Mobilité :</strong> Classe II sur les molaires et les incisives mandibulaires.</li>
+                <li><strong>Lésions spécifiques :</strong> Atteintes de furcation de classe II (Hamp) sur 36 et 46.</li>
+            </ul>
+            <p><strong>Examen radiographique :</strong> Le bilan (statut long-cône) objective une alvéolyse horizontale généralisée atteignant le tiers moyen et le tiers apical des racines (perte osseuse > 50 %). On note un élargissement desmodontal sur les dents mobiles.</p>
+        </div>
+
+        <div class="qa-block">
+            <span class="question-title">Question 1 : Diagnostic</span>
+            <p class="question-text">Quel est votre diagnostic parodontal complet selon la classification de Chicago 2017 ? Justifiez précisément le choix du Grade.</p>
+            
+            <button class="toggle-btn" onclick="toggleCorrection('q1')">Afficher la réponse</button>
+            
+            <div id="q1" class="correction">
+                <h4>Correction</h4>
+                <p><strong>Diagnostic :</strong> Parodontite de Stade III (ou IV), Généralisée, Grade C.</p>
+                <p><strong>Justification du Stade (III/IV) :</strong> Perte osseuse > 50 % (tiers apical), poches > 6 mm, atteintes de furcation Classe II, mobilités dentaires. (Le stade IV serait retenu si dysfonction masticatoire ou perte dentaire importante non précisée ici, sinon Stade III).</p>
+                <p><strong>Justification du Grade C :</strong></p>
+                <ul>
+                    <li>Le critère primaire (ratio perte osseuse/âge) placerait le patient en Grade B ou C.</li>
+                    <li><strong>Facteur Modifiant (Critère décisif) :</strong> Présence d'un diabète non équilibré (HbA1c &ge; 7,0 %). Ici HbA1c = 8,2 %. Selon la classification, cela impose automatiquement le Grade C, indépendamment de la destruction osseuse.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="qa-block">
+            <span class="question-title">Question 2 : Physiopathologie</span>
+            <p class="question-text">Expliquez les mécanismes biologiques bidirectionnels reliant le diabète et la maladie parodontale. Comment l'hyperglycémie aggrave-t-elle la destruction parodontale ?</p>
+            
+            <button class="toggle-btn" onclick="toggleCorrection('q2')">Afficher la réponse</button>
+            
+            <div id="q2" class="correction">
+                <h4>Correction</h4>
+                
+                <p><strong>Impact du Diabète sur le Parodonte :</strong></p>
+                <ul>
+                    <li><strong>Vasculaire :</strong> Microangiopathie, épaississement de la membrane basale capillaire, réduisant l'apport en oxygène et la migration des cellules immunitaires.</li>
+                    <li><strong>Immunitaire :</strong> Altération de la fonction des polynucléaires neutrophiles (chimiotaxie et phagocytose diminuées).</li>
+                    <li><strong>Moléculaire (AGEs) :</strong> Accumulation de produits terminaux de glycation avancée (AGEs) qui se lient à leurs récepteurs (RAGEs) &rightarrow; Stress oxydatif + augmentation des cytokines pro-inflammatoires (IL-1, IL-6, TNF-&alpha;) &rightarrow; Activation des ostéoclastes (via RANKL) et destruction tissulaire accrue.</li>
+                    <li><strong>Cicatrisation :</strong> Altérée (apoptose des fibroblastes, synthèse de collagène réduite).</li>
+                </ul>
+                <p><strong>Impact de la Parodontite sur le Diabète :</strong></p>
+                <ul>
+                    <li>L'inflammation parodontale augmente la charge inflammatoire systémique (TNF-&alpha;, IL-6 sériques).</li>
+                    <li>Ces médiateurs favorisent l'insulino-résistance, perturbant le contrôle glycémique.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="qa-block">
+            <span class="question-title">Question 3 : Plan de traitement</span>
+            <p class="question-text">Détaillez votre prise en charge globale. Quelles sont les précautions spécifiques à prendre concernant ce patient lors de la thérapeutique parodontale non chirurgicale, conformément aux recommandations CNEP SFPIO 2024 ?</p>
+            
+            <button class="toggle-btn" onclick="toggleCorrection('q3')">Afficher la réponse</button>
+            
+            <div id="q3" class="correction">
+                <h4>Correction</h4>
+                <p><strong>1. Coordination Médicale (PRIORITAIRE) :</strong></p>
+                <ul>
+                    <li>Contact avec le diabétologue : l'HbA1c à 8,2 % indique un diabète non équilibré. Demande d'équilibration avant chirurgie éventuelle, mais ne pas retarder le TPNC.</li>
+                </ul>
+                <p><strong>2. Phase Étiologique (TPNC) :</strong></p>
+                <ul>
+                    <li>Enseignement à l'hygiène orale (brosses souples, brossettes) + Hydratation (xérostomie).</li>
+                    <li>Détartrage et Surfaçage radiculaire complet.</li>
+                </ul>
+                <p><strong>3. Prescription (Selon CNEP SFPIO 2024 - QC 5) :</strong></p>
+                <ul>
+                    <li><strong>Patient diabétique avec HbA1c > 8 % :</strong>
+                        <ul>
+                            <li><strong>Antibioprophylaxie ?</strong> Avis médical requis. Si risque infectieux majeur ou comorbidité, Amoxicilline 2g 1h avant peut être envisagée.</li>
+                            <li><strong>Antibiothérapie curative ?</strong> Si parodontite Stade III/IV Grade C (ce qui est le cas) : Possibilité de prescrire <strong>Amoxicilline 500mg + Métronidazole 500mg</strong> (3x/j pendant 7 jours) en adjuvant du surfaçage pour maximiser la réduction de l'inflammation.</li>
+                            <li><strong>Antiseptiques :</strong> Bains de bouche Chlorhexidine 0,12% recommandés.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Gestion de séance :</strong> Rendez-vous le matin (après petit-déjeuner et prise d'insuline/médicaments) pour éviter l'hypoglycémie.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="qa-block">
+            <span class="question-title">Question 4 : Pronostic</span>
+            <p class="question-text">Quel est l'impact de l'équilibre glycémique sur le résultat du traitement parodontal et la cicatrisation ?</p>
+            
+            <button class="toggle-btn" onclick="toggleCorrection('q4')">Afficher la réponse</button>
+            
+            <div id="q4" class="correction">
+                <h4>Correction</h4>
+                <p><strong>Diabète équilibré (HbA1c < 7%) :</strong> Réponse au traitement et cicatrisation comparables au patient sain.</p>
+                <p><strong>Diabète non équilibré (HbA1c > 7-8%) :</strong></p>
+                <ul>
+                    <li>Cicatrisation altérée et retardée.</li>
+                    <li>Risque accru de complications post-opératoires (abcès, nécrose).</li>
+                    <li>Réponse au traitement parodontal plus imprévisible.</li>
+                    <li>Risque de récidive élevé (Maintenance rapprochée nécessaire).</li>
+                </ul>
+                <p><strong>Bénéfice :</strong> Le traitement parodontal réussi peut permettre une diminution de l'HbA1c de l'ordre de 0,4 à 0,5 %, contribuant à l'équilibre du diabète.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function toggleCorrection(id) {
+            var x = document.getElementById(id);
+            var btn = x.previousElementSibling;
+            
+            if (x.style.display === "none" || x.style.display === "") {
+                x.style.display = "block";
+                btn.textContent = "Masquer la réponse";
+                btn.style.backgroundColor = "#7f8c8d";
+            } else {
+                x.style.display = "none";
+                btn.textContent = "Afficher la réponse";
+                btn.style.backgroundColor = "#3498db";
+            }
+        }
+    </script>
+    
+    <script src="../script.js"></script>
+
+</body>
+</html>

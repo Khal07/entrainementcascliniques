@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cas N°13 - Parodontologie</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        /* Styles spécifiques pour ce format "Question par Question" */
+        .enonce {
+            background-color: #f8f9fa;
+            border-left: 4px solid #3498db;
+            padding: 20px;
+            border-radius: 4px;
+            margin-bottom: 30px;
+            font-size: 0.95em;
+            line-height: 1.6;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        
+        .qa-block {
+            background-color: #fff;
+            border: 1px solid #eee;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+        }
+
+        .question-title {
+            font-weight: bold;
+            color: #2c3e50;
+            font-size: 1.1em;
+            display: block;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #ecf0f1;
+            padding-bottom: 5px;
+        }
+
+        .question-text {
+            margin-bottom: 15px;
+            color: #34495e;
+        }
+
+        button.toggle-btn {
+            background-color: #3498db;
+            font-size: 0.9em;
+            padding: 8px 20px;
+            margin: 10px 0;
+            width: auto;
+            display: inline-block;
+        }
+        button.toggle-btn:hover {
+            background-color: #2980b9;
+        }
+
+        .correction {
+            display: none;
+            margin-top: 15px;
+            padding: 15px;
+            background-color: #e8f5e9;
+            border-left: 4px solid #27ae60;
+            border-radius: 4px;
+            color: #1b5e20;
+        }
+
+        .correction h4 {
+            margin-top: 0;
+            color: #27ae60;
+            font-size: 1em;
+            text-transform: uppercase;
+            border-bottom: 1px solid #c8e6c9;
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+        }
+
+        ul { margin-top: 5px; margin-bottom: 10px; padding-left: 20px; }
+        li { margin-bottom: 5px; }
+    </style>
+</head>
+<body>
+
+    <script>
+        if (localStorage.getItem('isLoggedIn') !== 'true') {
+            window.location.href = '../index.html';
+        }
+    </script>
+
+    <nav style="background: #2c3e50;">
+        <div class="nav-content">
+            <span class="logo" style="color:white;">Paro - Cas N°13</span>
+            <div class="nav-links">
+                <a href="cas_cliniques_paro.html" class="nav-btn" style="color:white; border-color:white;">&larr; Retour aux Cas</a>
+                <a href="../index.html" class="nav-btn" style="color:white; border-color:white;">Accueil</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <header>
+            <h1>Cas Clinique N°13 : Parodontite Sévère (Grade C)</h1>
+            <p class="subtitle">Forme Molaire-Incisive - Diagnostic & Antibiothérapie</p>
+        </header>
+
+        <div class="enonce">
+            <h3 style="margin-top:0; color:#2c3e50;">ÉNONCÉ DU CAS CLINIQUE</h3>
+            <p>Une patiente de 29 ans, non fumeuse, en bonne santé générale, consulte pour l'apparition récente d'un espace entre ses incisives supérieures et une mobilité dentaire qui l'inquiète.</p>
+            <p>La patiente rapporte que ses dents se sont « déplacées vers l'avant » en quelques mois. L'anamnèse révèle que sa mère a perdu ses dents très jeune (vers 35 ans) pour cause de « déchaussement ».</p>
+            <p>L’examen clinique met en évidence une hygiène bucco-dentaire correcte (Indice de Plaque = 25 %), contrastant avec la sévérité des destructions tissulaires observées. La gencive est d'aspect inflammatoire modéré. On observe une migration vestibulaire des 11 et 21 avec apparition d'un diastème inter-incisif (éventail).</p>
+            <p><strong>Le bilan parodontal révèle :</strong></p>
+            <ul>
+                <li><strong>Sondage :</strong> Profondeurs de poche (PPD) de 7 à 9 mm localisées sur les faces mésiales et distales des quatre premières molaires (16, 26, 36, 46) et sur le secteur incisif maxillaire et mandibulaire. Les autres secteurs présentent des profondeurs de 3 à 4 mm.</li>
+                <li><strong>Saignement :</strong> Saignement au sondage (BOP) présent sur les sites profonds.</li>
+                <li><strong>Mobilité :</strong> Classe II sur 11, 21, 31, 41.</li>
+                <li><strong>Vitalité :</strong> Positive sur l'ensemble des dents.</li>
+            </ul>
+            <p><strong>Examen radiographique :</strong> Le bilan (statut long-cône) objective des lésions osseuses verticales (angulaires) profondes, symétriques, en « arc de cercle », sur les faces mésiales des premières molaires. On note une alvéolyse horizontale sévère (> 50 % de la hauteur radiculaire) sur le bloc incisif. Le rapport perte osseuse / âge est > 1.</p>
+        </div>
+
+        <div class="qa-block">
+            <span class="question-title">Question 1 : Diagnostic</span>
+            <p class="question-text">Quel est votre diagnostic parodontal complet selon la classification de Chicago 2017 ? Justifiez chaque terme de votre diagnostic (Stade, Grade, Étendue, Distribution).</p>
+            
+            <button class="toggle-btn" onclick="toggleCorrection('q1')">Afficher la réponse</button>
+            
+            <div id="q1" class="correction">
+                <h4>Correction</h4>
+                <p><strong>Diagnostic :</strong> Parodontite de Stade IV, Grade C, Généralisée, Distribution Molaire-Incisive.</p>
+                
+                <p><strong>Justification :</strong></p>
+                <ul>
+                    <li><strong>Stade IV (Sévérité/Complexité) :</strong> Perte osseuse > 50 % (tiers apical), dysfonction masticatoire/traumatisme occlusal secondaire (mobilité + migration dentaire/diastème). <em>Note : Le stade III pourrait être discuté si la migration est mineure, mais la notion de "migration récente" et "diastème" oriente vers le stade IV.</em></li>
+                    <li><strong>Grade C (Progression) :</strong> Ratio perte osseuse/âge > 1 (Lésions sévères à 29 ans). Destruction disproportionnée par rapport à la quantité de biofilm (IP 25%).</li>
+                    <li><strong>Généralisée :</strong> Plus de 30 % des sites atteints (implique molaires + incisives + autres sites profonds décrits).</li>
+                    <li><strong>Distribution :</strong> Profil classique Molaire-Incisive (lésions verticales typiques sur les 1ères molaires et horizontales sur incisives).</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="qa-block">
+            <span class="question-title">Question 2 : Microbiologie et Étiopathogénie</span>
+            <p class="question-text">Quel est le pathogène clé (« Keystone Pathogen ») historiquement et spécifiquement associé à ce tableau clinique ? Décrivez ses facteurs de virulence principaux permettant l'échappement au système immunitaire.</p>
+            
+            <button class="toggle-btn" onclick="toggleCorrection('q2')">Afficher la réponse</button>
+            
+            <div id="q2" class="correction">
+                <h4>Correction</h4>
+                <p><strong>Pathogène clé :</strong> <em>Aggregatibacter actinomycetemcomitans</em> (Aa) (bactérie capnophile, Gram -).</p>
+                
+                <p><strong>Facteurs de virulence :</strong></p>
+                <ul>
+                    <li><strong>Leucotoxine (LtxA) :</strong> Détruit les leucocytes (polynucléaires neutrophiles et monocytes), neutralisant la première ligne de défense immunitaire (déficit de phagocytose).</li>
+                    <li><strong>Envahissement tissulaire :</strong> Capacité à pénétrer l'épithélium gingival et le tissu conjonctif (rendant l'éradication mécanique seule difficile).</li>
+                </ul>
+                <p><em>Note : La dysbiose inclut aussi souvent Porphyromonas gingivalis dans les stades avancés.</em></p>
+            </div>
+        </div>
+
+        <div class="qa-block">
+            <span class="question-title">Question 3 : Thérapeutique médicamenteuse</span>
+            <p class="question-text">Conformément aux recommandations CNEP SFPIO 2024, une antibiothérapie systémique est-elle indiquée en adjuvant du traitement parodontal non chirurgical pour cette patiente ? Si oui, rédigez l'ordonnance précise (molécules, dosages, durée).</p>
+            
+            <button class="toggle-btn" onclick="toggleCorrection('q3')">Afficher la réponse</button>
+            
+            <div id="q3" class="correction">
+                <h4>Correction</h4>
+                <p><strong>Indication :</strong> OUI.</p>
+                <p><strong>Justification :</strong> Recommandée pour les parodontites de Stade III/IV, Grade C (jeune adulte), avec profil molaire-incisive. L'inadéquation biofilm/destruction justifie le soutien systémique.</p>
+                <p><strong>Ordonnance (Protocole "Winkelhoff") :</strong></p>
+                <ul>
+                    <li><strong>Amoxicilline :</strong> 500 mg.</li>
+                    <li><strong>Métronidazole :</strong> 500 mg.</li>
+                    <li><strong>Posologie :</strong> 1 comprimé de chaque, 3 fois par jour (matin, midi, soir), au cours des repas.</li>
+                    <li><strong>Durée :</strong> 7 jours.</li>
+                    <li><strong>À débuter :</strong> Le jour du débridement (surfaçage) ou juste après (phase active).</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="qa-block">
+            <span class="question-title">Question 4 : Stratégie globale</span>
+            <p class="question-text">Détaillez les étapes de votre plan de traitement, en incluant la gestion des séquelles esthétiques (migration).</p>
+            
+            <button class="toggle-btn" onclick="toggleCorrection('q4')">Afficher la réponse</button>
+            
+            <div id="q4" class="correction">
+                <h4>Correction</h4>
+                <p><strong>Phase Systémique/Comportementale (Étape 1) :</strong></p>
+                <ul>
+                    <li>Explications (génétique, transmissibilité potentielle &rightarrow; dépistage fratrie conseillé).</li>
+                    <li>Enseignement hygiène orale strict (EHO).</li>
+                </ul>
+                <p><strong>Phase Étiologique (TPNC - Étape 2) :</strong></p>
+                <ul>
+                    <li>Surfaçage radiculaire complet (bouche complète idéalement sous 24-48h pour éviter la réinfection ou par quadrants) sous couverture antibiotique.</li>
+                </ul>
+                <p><strong>Réévaluation :</strong> À 3 mois.</p>
+                <p><strong>Phase Chirurgicale (Étape 3 - Si nécessaire) :</strong></p>
+                <ul>
+                    <li>Traitement des lésions intra-osseuses résiduelles (poches > 6mm) sur les molaires par Régénération Tissulaire (Comblement + Membrane ou Emdogain®).</li>
+                </ul>
+                <p><strong>Phase Fonctionnelle/Esthétique :</strong></p>
+                <ul>
+                    <li><strong>Orthodontie :</strong> Pour fermer le diastème et ingresser les incisives (après assainissement et contrôle de l'inflammation obligatoire).</li>
+                    <li><strong>Contention :</strong> Indispensable en fin de traitement (parodonte réduit).</li>
+                </ul>
+                <p><strong>Maintenance (TPS - Étape 4) :</strong></p>
+                <ul>
+                    <li>Rythme rapproché (tous les 3 mois) en raison du Grade C (risque de récidive élevé).</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function toggleCorrection(id) {
+            var x = document.getElementById(id);
+            var btn = x.previousElementSibling;
+            
+            if (x.style.display === "none" || x.style.display === "") {
+                x.style.display = "block";
+                btn.textContent = "Masquer la réponse";
+                btn.style.backgroundColor = "#7f8c8d";
+            } else {
+                x.style.display = "none";
+                btn.textContent = "Afficher la réponse";
+                btn.style.backgroundColor = "#3498db";
+            }
+        }
+    </script>
+    
+    <script src="../script.js"></script>
+
+</body>
+</html>

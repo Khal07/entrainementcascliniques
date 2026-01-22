@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cas N°16 - Parodontologie</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        /* Styles spécifiques pour ce format "Question par Question" */
+        .enonce {
+            background-color: #f8f9fa;
+            border-left: 4px solid #3498db;
+            padding: 20px;
+            border-radius: 4px;
+            margin-bottom: 30px;
+            font-size: 0.95em;
+            line-height: 1.6;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        
+        .qa-block {
+            background-color: #fff;
+            border: 1px solid #eee;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+        }
+
+        .question-title {
+            font-weight: bold;
+            color: #2c3e50;
+            font-size: 1.1em;
+            display: block;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #ecf0f1;
+            padding-bottom: 5px;
+        }
+
+        .question-text {
+            margin-bottom: 15px;
+            color: #34495e;
+        }
+
+        button.toggle-btn {
+            background-color: #3498db;
+            font-size: 0.9em;
+            padding: 8px 20px;
+            margin: 10px 0;
+            width: auto;
+            display: inline-block;
+        }
+        button.toggle-btn:hover {
+            background-color: #2980b9;
+        }
+
+        .correction {
+            display: none;
+            margin-top: 15px;
+            padding: 15px;
+            background-color: #e8f5e9;
+            border-left: 4px solid #27ae60;
+            border-radius: 4px;
+            color: #1b5e20;
+        }
+
+        .correction h4 {
+            margin-top: 0;
+            color: #27ae60;
+            font-size: 1em;
+            text-transform: uppercase;
+            border-bottom: 1px solid #c8e6c9;
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+        }
+
+        ul { margin-top: 5px; margin-bottom: 10px; padding-left: 20px; }
+        li { margin-bottom: 5px; }
+    </style>
+</head>
+<body>
+
+    <script>
+        if (localStorage.getItem('isLoggedIn') !== 'true') {
+            window.location.href = '../index.html';
+        }
+    </script>
+
+    <nav style="background: #2c3e50;">
+        <div class="nav-content">
+            <span class="logo" style="color:white;">Paro - Cas N°16</span>
+            <div class="nav-links">
+                <a href="cas_cliniques_paro.html" class="nav-btn" style="color:white; border-color:white;">&larr; Retour aux Cas</a>
+                <a href="../index.html" class="nav-btn" style="color:white; border-color:white;">Accueil</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <header>
+            <h1>Cas Clinique N°16 : Accroissement Gingival (Greffé)</h1>
+            <p class="subtitle">Origine médicamenteuse - Diagnostic & Prise en charge</p>
+        </header>
+
+        <div class="enonce">
+            <h3 style="margin-top:0; color:#2c3e50;">ÉNONCÉ DU CAS CLINIQUE</h3>
+            <p>Un patient de 56 ans, greffé rénal depuis 8 mois, consulte pour une augmentation importante du volume de ses gencives qui recouvre partiellement ses dents et gêne la mastication.</p>
+            <p>L'anamnèse médicale révèle un traitement immunosuppresseur par <strong>Ciclosporine A</strong> et un traitement antihypertenseur par <strong>Nifédipine</strong>. Le patient rapporte des saignements fréquents au brossage et une difficulté croissante à maintenir une hygiène bucco-dentaire correcte.</p>
+            <p>L’examen clinique met en évidence une hygiène bucco-dentaire insuffisante (Indice de Plaque = 70 %). On observe un accroissement gingival généralisé, intéressant les secteurs antérieurs et postérieurs, maxillaires et mandibulaires. La gencive présente un aspect lobulé, ferme et fibreux par endroits, mais apparaît rouge, luisante et œdématiée au niveau des papilles et de la gencive marginale. L'accroissement recouvre le tiers cervical, voire le tiers moyen des couronnes cliniques sur certaines dents.</p>
+            <p><strong>Le bilan parodontal révèle :</strong></p>
+            <ul>
+                <li><strong>Sondage :</strong> Profondeurs de sondage (PPD) de 5 à 7 mm généralisées. Le sondage ne met pas en évidence de perte d'attache clinique (la jonction émail-cément est située coronairement au niveau osseux, masquée par l'accroissement).</li>
+                <li><strong>Saignement :</strong> Saignement abondant au sondage (BOP > 50 %).</li>
+                <li><strong>Mobilité :</strong> Aucune mobilité dentaire pathologique.</li>
+            </ul>
+            <p><strong>Examen radiographique :</strong> Le bilan long-cône ne montre aucune alvéolyse significative. Les crêtes osseuses se situent à une distance physiologique (1-2 mm) de la jonction émail-cément supposée.</p>
+        </div>
+
+        <div class="qa-block">
+            <span class="question-title">Question 1 : Diagnostic</span>
+            <p class="question-text">Quel est votre diagnostic précis selon la classification de Chicago 2017 ? Justifiez votre réponse en expliquant la nature des poches observées.</p>
+            
+            <button class="toggle-btn" onclick="toggleCorrection('q1')">Afficher la réponse</button>
+            
+            <div id="q1" class="correction">
+                <h4>Correction</h4>
+                <p><strong>Diagnostic :</strong> Accroissement gingival d'origine médicamenteuse (ou Hypertrophie gingivale médicamenteuse).</p>
+                <ul>
+                    <li><strong>Catégorie :</strong> Maladies gingivales non induites par la plaque > Réactions iatrogènes.</li>
+                </ul>
+                <p><strong>Nature des poches :</strong> Pseudo-poches (ou fausses poches).</p>
+                
+                <ul>
+                    <li><strong>Justification :</strong> L'augmentation de la profondeur de sondage (5-7 mm) est due à la migration coronaire de la marge gingivale (augmentation du volume tissulaire) et non à une migration apicale de l'attache ou à une perte osseuse (radio normale).</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="qa-block">
+            <span class="question-title">Question 2 : Étiopathogénie</span>
+            <p class="question-text">Expliquez le mécanisme physiopathologique à l'origine de cette lésion. Quel est le rôle précis des facteurs locaux (plaque bactérienne) dans l'expression clinique de cette pathologie ?</p>
+            
+            <button class="toggle-btn" onclick="toggleCorrection('q2')">Afficher la réponse</button>
+            
+            <div id="q2" class="correction">
+                <h4>Correction</h4>
+                <p><strong>Mécanisme médicamenteux :</strong></p>
+                <ul>
+                    <li><strong>Molécules incriminées :</strong> Ciclosporine A (immunosuppresseur) et Nifédipine (inhibiteur calcique).</li>
+                    <li><strong>Action :</strong> Perturbation du flux calcique intracellulaire des fibroblastes gingivaux &rightarrow; Inhibition de la dégradation du collagène (baisse des collagénases/MMPs) et augmentation de la synthèse de la matrice extracellulaire &rightarrow; Fibrose.</li>
+                </ul>
+                <p><strong>Rôle de la plaque (Biofilm) :</strong></p>
+                <ul>
+                    <li><strong>Facteur aggravant majeur (effet synergique) :</strong> L'inflammation induite par la plaque majore l'expression clinique de l'accroissement (composante œdémateuse et inflammatoire se superposant à la composante fibreuse).</li>
+                    <li><strong>Cercle vicieux :</strong> L'accroissement crée des zones de rétention de plaque (pseudo-poches) difficiles à nettoyer, favorisant l'inflammation.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="qa-block">
+            <span class="question-title">Question 3 : Prise en charge non chirurgicale</span>
+            <p class="question-text">Détaillez la première phase de votre plan de traitement. Quelle démarche spécifique devez-vous entreprendre vis-à-vis du médecin traitant du patient ?</p>
+            
+            <button class="toggle-btn" onclick="toggleCorrection('q3')">Afficher la réponse</button>
+            
+            <div id="q3" class="correction">
+                <h4>Correction</h4>
+                <p><strong>Objectif :</strong> Réduire la composante inflammatoire de l'accroissement.</p>
+                <p><strong>Étapes :</strong></p>
+                <ul>
+                    <li><strong>Contrôle de plaque rigoureux :</strong> Enseignement à l'hygiène orale (Brossage, brossettes) + Détartrage/Surfaçage soigneux pour éliminer les facteurs irritants locaux.</li>
+                    <li><strong>Consultation médicale (Courrier) :</strong> Demander au médecin traitant/néphrologue la possibilité de substitution des molécules incriminées (ex: Tacrolimus au lieu de Ciclosporine, autre antihypertenseur non inhibiteur calcique).</li>
+                </ul>
+                <p><em>Note : La substitution n'est pas toujours possible médicalement et ne garantit pas une régression totale, surtout si la fibrose est ancienne.</em></p>
+            </div>
+        </div>
+
+        <div class="qa-block">
+            <span class="question-title">Question 4 : Prise en charge chirurgicale</span>
+            <p class="question-text">Après réévaluation à 3 mois, l'inflammation a diminué mais l'accroissement fibreux persiste, gênant l'esthétique et l'hygiène. Quelle technique chirurgicale est indiquée pour corriger ces séquelles ? Décrivez-en le principe (type d'incision).</p>
+            
+            <button class="toggle-btn" onclick="toggleCorrection('q4')">Afficher la réponse</button>
+            
+            <div id="q4" class="correction">
+                <h4>Correction</h4>
+                <p><strong>Indication :</strong> Persistance de l'accroissement (préjudice esthétique ou fonctionnel) après maîtrise de l'inflammation.</p>
+                <p><strong>Technique de choix :</strong> Gingivectomie à biseau interne.</p>
+                
+                <ul>
+                    <li>Si tissu kératinisé suffisant : Permet d'éliminer le tissu en excès et de remodeler l'architecture gingivale.</li>
+                </ul>
+                <p><strong>Protocole (Principe) :</strong></p>
+                <ol>
+                    <li>Repérage de la base des fausses poches (points sanglants).</li>
+                    <li>Incision à biseau interne (pour amincir le lambeau et éliminer la paroi interne de la poche) en direction de la crête osseuse.</li>
+                    <li>Élimination du bourrelet gingival excédentaire.</li>
+                    <li>Gingivoplastie (remodelage des contours) pour recréer une architecture physiologique.</li>
+                </ol>
+                <p><em>Note : Risque de récidive élevé si les médicaments sont maintenus et/ou si le contrôle de plaque est insuffisant.</em></p>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function toggleCorrection(id) {
+            var x = document.getElementById(id);
+            var btn = x.previousElementSibling;
+            
+            if (x.style.display === "none" || x.style.display === "") {
+                x.style.display = "block";
+                btn.textContent = "Masquer la réponse";
+                btn.style.backgroundColor = "#7f8c8d";
+            } else {
+                x.style.display = "none";
+                btn.textContent = "Afficher la réponse";
+                btn.style.backgroundColor = "#3498db";
+            }
+        }
+    </script>
+    
+    <script src="../script.js"></script>
+
+</body>
+</html>

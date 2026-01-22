@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cas N°6 - Parodontologie</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        /* Styles spécifiques pour ce format "Question par Question" */
+        .enonce {
+            background-color: #f8f9fa;
+            border-left: 4px solid #3498db;
+            padding: 20px;
+            border-radius: 4px;
+            margin-bottom: 30px;
+            font-size: 0.95em;
+            line-height: 1.6;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        
+        .qa-block {
+            background-color: #fff;
+            border: 1px solid #eee;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+        }
+
+        .question-title {
+            font-weight: bold;
+            color: #2c3e50;
+            font-size: 1.1em;
+            display: block;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #ecf0f1;
+            padding-bottom: 5px;
+        }
+
+        .question-text {
+            margin-bottom: 15px;
+            color: #34495e;
+        }
+
+        button.toggle-btn {
+            background-color: #3498db;
+            font-size: 0.9em;
+            padding: 8px 20px;
+            margin: 10px 0;
+            width: auto;
+            display: inline-block;
+        }
+        button.toggle-btn:hover {
+            background-color: #2980b9;
+        }
+
+        .correction {
+            display: none;
+            margin-top: 15px;
+            padding: 15px;
+            background-color: #e8f5e9;
+            border-left: 4px solid #27ae60;
+            border-radius: 4px;
+            color: #1b5e20;
+        }
+
+        .correction h4 {
+            margin-top: 0;
+            color: #27ae60;
+            font-size: 1em;
+            text-transform: uppercase;
+            border-bottom: 1px solid #c8e6c9;
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+        }
+
+        ul { margin-top: 5px; margin-bottom: 10px; padding-left: 20px; }
+        li { margin-bottom: 5px; }
+    </style>
+</head>
+<body>
+
+    <script>
+        if (localStorage.getItem('isLoggedIn') !== 'true') {
+            window.location.href = '../index.html';
+        }
+    </script>
+
+    <nav style="background: #2c3e50;">
+        <div class="nav-content">
+            <span class="logo" style="color:white;">Paro - Cas N°6</span>
+            <div class="nav-links">
+                <a href="cas_cliniques_paro.html" class="nav-btn" style="color:white; border-color:white;">&larr; Retour aux Cas</a>
+                <a href="../index.html" class="nav-btn" style="color:white; border-color:white;">Accueil</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <header>
+            <h1>Cas Clinique N°6 : Pathologies Péri-implantaires</h1>
+            <p class="subtitle">Péri-implantite - Diagnostic (IDRA) & Prise en charge</p>
+        </header>
+
+        <div class="enonce">
+            <h3 style="margin-top:0; color:#2c3e50;">ÉNONCÉ DU CAS CLINIQUE</h3>
+            <p>Un patient de 62 ans, ancien fumeur (sevrage depuis 5 ans), traité pour une parodontite généralisée il y a 10 ans, consulte pour une « gêne et un mauvais goût » au niveau de son implant en bas à gauche.</p>
+            <p>Le patient est porteur d'une prothèse supra-implantaire unitaire scellée sur la 36, posée il y a 4 ans. Il admet avoir interrompu son suivi parodontal depuis 2 ans.</p>
+            <p>L’examen clinique révèle une hygiène bucco-dentaire moyenne (Indice de Plaque = 45 %). La muqueuse péri-implantaire en regard de la 36 est érythémateuse, œdématiée et présente une récession de la muqueuse marginale vestibulaire exposant le col de l'implant.</p>
+            <p><strong>Les données cliniques spécifiques à l'implant 36 sont les suivantes :</strong></p>
+            <ul>
+                <li><strong>Sondage péri-implantaire :</strong> Profondeurs de sondage (PPD) de 7 mm en mésio-vestibulaire et 6 mm en disto-lingual.</li>
+                <li><strong>Saignement/Suppuration :</strong> Saignement abondant au sondage (BOP+) associé à une suppuration au niveau du site mésial.</li>
+                <li><strong>Mobilité :</strong> Aucune mobilité de l'implant n'est détectée. La prothèse est stable.</li>
+            </ul>
+            <p><strong>Examen radiographique :</strong> Le bilan (rétro-alvéolaire de la 36) comparé au cliché de référence pris lors de la pose de la prothèse (J0) objective une perte osseuse crestale en forme de cratère (« saucerisation ») s'étendant au-delà du remodelage osseux physiologique initial. Le niveau osseux se situe à 4 mm apicalement au col de l'implant. On note la présence potentielle d'un excès de ciment de scellement en mésial.</p>
+        </div>
+
+        <div class="qa-block">
+            <span class="question-title">Question 1 : Diagnostic</span>
+            <p class="question-text">Quel est votre diagnostic précis pour l'implant 36 selon la classification de Chicago 2017 ? Justifiez votre réponse en énumérant les critères majeurs présents.</p>
+            
+            <button class="toggle-btn" onclick="toggleCorrection('q1')">Afficher la réponse</button>
+            
+            <div id="q1" class="correction">
+                <h4>Correction</h4>
+                <p><strong>Diagnostic :</strong> Péri-implantite.</p>
+                <p><strong>Justification (Critères Chicago 2017) :</strong></p>
+                <ul>
+                    <li><strong>Inflammation :</strong> Présence de saignement (BOP+) et de suppuration au sondage.</li>
+                    <li><strong>Profondeur de poche :</strong> Augmentation de la profondeur de sondage par rapport aux examens précédents (ici poches de 6 et 7 mm).</li>
+                    <li><strong>Perte osseuse :</strong> Perte osseuse visible radiographiquement au-delà du remodelage osseux physiologique initial (comparaison avec cliché J0).</li>
+                </ul>
+                <p><strong>Note :</strong> En l'absence de cliché antérieur, les critères seuils seraient : PPD &ge; 6 mm + Perte osseuse &ge; 3 mm apicalement à la portion intra-osseuse + BOP/Suppuration.</p>
+            </div>
+        </div>
+
+        <div class="qa-block">
+            <span class="question-title">Question 2 : Évaluation du Risque</span>
+            <p class="question-text">Citez les 8 paramètres de l'indice IDRA (Implant Disease Risk Assessment) permettant d'évaluer le risque de maladie péri-implantaire chez ce patient.</p>
+            
+            <button class="toggle-btn" onclick="toggleCorrection('q2')">Afficher la réponse</button>
+            
+            <div id="q2" class="correction">
+                <h4>Correction</h4>
+                <p><strong>Les 8 paramètres du diagramme fonctionnel de risque sont :</strong></p>
+                <ul>
+                    <li>Antécédents de parodontite (Facteur de risque majeur).</li>
+                    <li>% de sites implantaires avec BOP (Saignement).</li>
+                    <li>Nombre de poches &ge; 5 mm (Dents et implants).</li>
+                    <li>Ratio Perte osseuse / Âge (Susceptibilité).</li>
+                    <li>Susceptibilité parodontale (Stade et Grade actuel).</li>
+                    <li>Observance du suivi thérapeutique (Maintenance).</li>
+                    <li>Facteur prothétique 1 : Distance limite restauration / os (nettoyabilité).</li>
+                    <li>Facteur prothétique 2 : Facteurs iatrogènes (Excès de ciment, ajustage, contours).</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="qa-block">
+            <span class="question-title">Question 3 : Thérapeutique non chirurgicale</span>
+            <p class="question-text">Détaillez la première phase de votre prise en charge thérapeutique pour cet implant. Précisez les moyens instrumentaux spécifiques à utiliser.</p>
+            
+            <button class="toggle-btn" onclick="toggleCorrection('q3')">Afficher la réponse</button>
+            
+            <div id="q3" class="correction">
+                <h4>Correction</h4>
+                <p><strong>Objectif :</strong> Réduire l'inflammation, éliminer le biofilm et préparer, si nécessaire, à la chirurgie.</p>
+                <p><strong>Étapes :</strong></p>
+                <ul>
+                    <li><strong>Contrôle des facteurs de risque :</strong> Ré-enseignement à l'hygiène (brossettes interdentaires) et tabac (vérifier maintien du sevrage).</li>
+                    <li><strong>Dépose de la prothèse (si vissée) ou nettoyage des excès :</strong> Ici prothèse scellée &rightarrow; tentative d'élimination des excès de ciment visibles à la radio.</li>
+                    <li><strong>Débridement mécanique :</strong> Utilisation de curettes en titane, carbone ou plastique (pour ne pas rayer la surface) ou inserts ultrasoniques spécifiques (PEEK/Carbone).</li>
+                    <li><strong>Décontamination adjuvante :</strong> Aéropolissage (poudre glycine ou érythritol) pour nettoyer les spires, ou irrigation antiseptique (Chlorhexidine/Bétadine).</li>
+                </ul>
+                <p><strong>Note :</strong> L'antibiothérapie systémique n'est pas recommandée en première intention pour la péri-implantite (sauf signes généraux ou abcès aigu).</p>
+            </div>
+        </div>
+
+        <div class="qa-block">
+            <span class="question-title">Question 4 : Thérapeutique chirurgicale</span>
+            <p class="question-text">À la réévaluation, la suppuration a disparu mais une poche de 6 mm persiste avec saignement et la lésion osseuse est infra-osseuse (verticale). Discutez des options chirurgicales et de la gestion de la surface implantaire.</p>
+            
+            <button class="toggle-btn" onclick="toggleCorrection('q4')">Afficher la réponse</button>
+            
+            <div id="q4" class="correction">
+                <h4>Correction</h4>
+                <p><strong>Indication :</strong> Persistance de poche > 5 mm + BOP + Perte osseuse.</p>
+                <p><strong>Gestion de la surface implantaire (Décontamination) :</strong></p>
+                <ul>
+                    <li><strong>Mécanique :</strong> Implantoplastie (polissage des spires exposées pour les rendre lisses et nettoyables) ou brosses rotatives en titane.</li>
+                    <li><strong>Chimique :</strong> Application locale d'antiseptiques (H2O2, Chlorhexidine) ou acides.</li>
+                </ul>
+                <p><strong>Option Chirurgicale (selon la morphologie du défaut) :</strong></p>
+                <ul>
+                    <li><strong>Défaut infra-osseux (Vertical) :</strong> Technique de Régénération Osseuse Guidée (ROG). Comblement (Xénogreffe/Os autogène) + Membrane résorbable. Condition : Défaut contenant (3 ou 4 parois).</li>
+                    <li><strong>Alternative (si défaut non contenant) :</strong> Chirurgie de résection (apicalisation du lambeau) associée à une implantoplastie pour réduire la poche.</li>
+                </ul>
+                <p><strong>Dernier recours :</strong> Dépose de l'implant (explantation) si perte osseuse > 50% ou mobilité.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function toggleCorrection(id) {
+            var x = document.getElementById(id);
+            var btn = x.previousElementSibling;
+            
+            if (x.style.display === "none" || x.style.display === "") {
+                x.style.display = "block";
+                btn.textContent = "Masquer la réponse";
+                btn.style.backgroundColor = "#7f8c8d";
+            } else {
+                x.style.display = "none";
+                btn.textContent = "Afficher la réponse";
+                btn.style.backgroundColor = "#3498db";
+            }
+        }
+    </script>
+    
+    <script src="../script.js"></script>
+
+</body>
+</html>
