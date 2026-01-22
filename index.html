@@ -3,103 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Internat Odontologie - Dashboard</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Bienvenue | Internat 4000</title>
+    <meta name="description" content="Page d'entrée vers Internat 4000">
+
+    <style>
+        /* --- Reset et base --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%;
+            width: 100%;
+            overflow: hidden; /* Empêche le défilement */
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        }
+
+        /* --- Arrière-plan design --- */
+        body {
+            display: flex;
+            justify-content: center; /* Centrage horizontal */
+            align-items: center; /* Centrage vertical */
+            /* Un dégradé sombre et profond pour un look moderne */
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+            color: white;
+        }
+
+        /* --- Conteneur principal avec animation d'entrée --- */
+        .container {
+            text-align: center;
+            /* Petite animation à l'arrivée sur la page */
+            animation: fadeUp 1.2s ease-out;
+        }
+
+        /* --- Le bouton "ENTRER" --- */
+        .enter-link {
+            /* Style du texte */
+            text-decoration: none;
+            font-size: 1.5rem; /* Taille du texte */
+            font-weight: 300; /* Fin et élégant */
+            letter-spacing: 6px; /* Espacement entre les lettres */
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.8);
+
+            /* Style du bouton (forme) */
+            display: inline-block;
+            padding: 20px 60px;
+            border: 1px solid rgba(255, 255, 255, 0.3); /* Bordure subtile */
+            border-radius: 50px; /* Bords arrondis */
+            
+            /* Transitions fluides pour les animations */
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            position: relative;
+            overflow: hidden;
+            backdrop-filter: blur(5px); /* Effet de flou léger derrière le bouton */
+        }
+
+        /* --- Effet au survol (Hover) --- */
+        .enter-link:hover {
+            background-color: white;
+            color: #0f0c29; /* Le texte devient sombre */
+            border-color: white;
+            box-shadow: 0 0 30px rgba(255, 255, 255, 0.3); /* Effet de "lueur" */
+            transform: scale(1.05); /* Légère augmentation de taille */
+            letter-spacing: 8px; /* Les lettres s'écartent un peu plus */
+        }
+
+        /* --- L'animation d'apparition au chargement --- */
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px); /* Vient du bas */
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
 </head>
 <body>
 
-    <div id="login-screen">
-        <div class="login-box">
-            <div class="login-icon">🔒</div>
-            <h2>Accès Réservé</h2>
-            <p>Veuillez entrer le code d'accès.</p>
-            <input type="password" id="passcode" placeholder="Code...">
-            <button onclick="checkCode()">Entrer</button>
-            <p id="error-msg" class="error"></p>
-        </div>
-    </div>
+    <main class="container">
+        <a href="https://internat4000.netlify.app" class="enter-link">
+            Entrer
+        </a>
+    </main>
 
-    <div id="app-content" style="display: none;">
-        
-        <nav>
-            <div class="nav-content">
-                <span class="logo">🦷 Internat Révisions</span>
-                <button onclick="logout()" class="logout-btn">Déconnexion</button>
-            </div>
-        </nav>
-
-        <div class="container">
-            <header>
-                <h1>Bienvenue Docteur</h1>
-                <p class="subtitle">Sélectionnez une discipline pour commencer l'entraînement.</p>
-            </header>
-
-            <div class="grid-menu">
-                
-                <a href="chir/cas_cliniques_chir.html" class="card">
-                    <div class="card-img-wrapper">
-                        <img src="IMG/chir.png" alt="Chirurgie Orale">
-                    </div>
-                    <h3>Chirurgie Orale</h3>
-                    <span class="badge">Disponibles</span>
-                </a>
-
-                <a href="paro/cas_cliniques_paro.html" class="card">
-                    <div class="card-img-wrapper">
-                        <img src="IMG/paro.png" alt="Parodontologie">
-                    </div>
-                    <h3>Parodontologie</h3>
-                    <span class="badge">Disponibles</span>
-                </a>
-
-                <a href="#" class="card disabled">
-                    <div class="card-img-wrapper">
-                        <img src="IMG/prothese.png" alt="Prothèse">
-                    </div>
-                    <h3>Prothèse</h3>
-                    <span class="badge gray">Bientôt</span>
-                </a>
-
-                <a href="#" class="card disabled">
-                    <div class="card-img-wrapper">
-                        <img src="IMG/oc.png" alt="OC-Endo">
-                    </div>
-                    <h3>OC / Endo</h3>
-                    <span class="badge gray">Bientôt</span>
-                </a>
-
-                <a href="#" class="card disabled">
-                    <div class="card-img-wrapper">
-                        <img src="IMG/pedo.png" alt="Pédodontie">
-                    </div>
-                    <h3>Pédodontie</h3>
-                    <span class="badge gray">Bientôt</span>
-                </a>
-
-                <a href="#" class="card disabled">
-                    <div class="card-img-wrapper">
-                        <img src="IMG/ortho.png" alt="Orthodontie">
-                    </div>
-                    <h3>Orthodontie</h3>
-                    <span class="badge gray">Bientôt</span>
-                </a>
-
-                <a href="#" class="card disabled">
-                    <div class="card-img-wrapper">
-                        <img src="IMG/lca.png" alt="LCA">
-                    </div>
-                    <h3>LCA</h3>
-                    <span class="badge gray">Bientôt</span>
-                </a>
-
-            </div>
-        </div>
-        
-        <footer>
-            <p>&copy; 2025 - Plateforme de Révision Internat</p>
-        </footer>
-    </div>
-
-    <script src="script.js"></script>
 </body>
 </html>
